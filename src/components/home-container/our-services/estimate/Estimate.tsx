@@ -1,8 +1,7 @@
-import React from 'react';
-import BlueLine from '../../reusable-components/blueLine/BlueLine';
-import Button from '../../reusable-components/button/Button';
+import BlueLine from '../../../reusable-components/blueLine/BlueLine';
+import Button from '../../../reusable-components/button/Button';
+import ChareEstimate from '../../../../assets/images/chart_estimate.png';
 import './estimate.scss';
-import ChareEstimate from './../../../assets/images/chart_estimate.png';
 
 const Estimate = () => {
   return (

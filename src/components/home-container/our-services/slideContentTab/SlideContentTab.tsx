@@ -1,7 +1,6 @@
-import React from 'react';
-import { servicesType } from '../../model';
+import PhoneIcon from '../../../icon-containers/PhoneIcon';
+import { servicesType } from '../../../model';
 import './slideContentTab.scss';
-import PhoneIcon from './../../icon-containers/PhoneIcon';
 
 const SlideContentTab = ({ title, desc }: servicesType) => {
   return (

@@ -1,12 +1,12 @@
 import React from 'react';
 import './services.scss';
-import RightArrowIcon from './../../icon-containers/RightArrowIcon';
 import { SwiperSlide } from 'swiper/react';
 import { servicesData } from '../fakeDataServices';
 import SlideContentTab from './../slideContentTab/SlideContentTab';
-import { servicesType } from '../../model';
-import ServicesSwiper from '../../reusable-components/swiper/ServicesSwiper';
-import BlueLine from './../../reusable-components/blueLine/BlueLine';
+import RightArrowIcon from '../../../icon-containers/RightArrowIcon';
+import BlueLine from '../../../reusable-components/blueLine/BlueLine';
+import ServicesSwiper from '../../../reusable-components/swiper/ServicesSwiper';
+import { servicesType } from '../../../model';
 
 const Services = () => {
   return (

@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import ContentDescription from '../reusable-components/content-description/ContentDescription';
 import VideoContainer from '../reusable-components/video-container/VideoContainer';
 import PlayIcon from '../icon-containers/PlayIcon';
@@ -13,9 +13,9 @@ import BlueLine from '../reusable-components/blueLine/BlueLine';
 import RightArrowIcon from '../icon-containers/RightArrowIcon';
 import LeftArrowIcon from '../icon-containers/LeftArrowIcon';
 import { technologiesType } from '../model';
-import OurServices from './../our-services/OurServices';
 import ContactUs from './contact-us/ContactUs';
 import './homeContainer.scss';
+import OurServices from './our-services/OurServices';
 
 const HomeContainer = () => {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
@@ -39,6 +39,10 @@ const HomeContainer = () => {
       videoRef?.current?.pause();
     }
   }, [isPlaying]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className='homeContainer__wrapper'>
