@@ -18,7 +18,6 @@ const Estimate = () => {
           className='estimate__container__text__button'
         />
       </div>
-
       <div className='estimate__container__image'>
         <img src={ChareEstimate} alt='' />
       </div>
