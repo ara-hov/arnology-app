@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+
+.mobileNavbar__container {
+  display: grid;
+  justify-content: center;
+  padding: 15rem 1vw 0 30vw;
+  .navbar {
+    grid-auto-flow: unset;
+    gap: 1.5rem;
+  }
+  a {
+    width: 13rem;
+    font-family: Trump gothic east bold, sans-serif;
+    font-size: 4.8rem;
+    line-height: 1.21;
+    letter-spacing: 0.96px;
+    overflow: hidden;
+    background: linear-gradient(
+      to right,
+      $primaryLightGreenBlue,
+      $primaryLightGreenBlue 50%,
+      $secondaryWhite 50%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 375ms ease;
+    text-decoration: none; // text decorations are clipped in WebKit browsers
+    &:hover {
+      background-position: 0 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobileNavbar__container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mobileNavbar__container {
+    padding: 5rem 35% 0 0;
+  }
+}

@@ -1,0 +1,100 @@
+@import '../../../styles/variables';
+.mySwiper {
+  margin-left: 4px !important;
+  margin-top: 14rem;
+}
+
+.swiper-container {
+  position: unset !important;
+  .swiper-button-prev {
+    top: 31.7rem;
+    left: 74rem;
+    &:after {
+      color: $secondaryWhite;
+      font-size: 3rem;
+    }
+  }
+
+  .swiper-button-next {
+    top: 31.7rem;
+    left: 78rem;
+    &:after {
+      color: $secondaryWhite;
+      font-size: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1679px) {
+  .mySwiper {
+    margin-top: 12rem;
+  }
+  .swiper-container {
+    .swiper-button-prev {
+      top: 21.7rem;
+      left: 54rem;
+    }
+
+    .swiper-button-next {
+      top: 21.7rem;
+      left: 58rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mySwiper {
+    margin-top: 7rem;
+  }
+  .swiper-container {
+    .swiper-button-prev {
+      top: 13.3rem;
+      left: 34rem;
+    }
+
+    .swiper-button-next {
+      top: 13.3rem;
+      left: 37rem;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .mySwiper {
+    margin-top: 10rem;
+  }
+  .swiper-container {
+    .swiper-button-prev {
+      top: 12.4rem;
+      left: 18rem;
+    }
+
+    .swiper-button-next {
+      top: 12.4rem;
+      left: 21rem;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .mySwiper {
+    margin-top: 3rem;
+  }
+  .swiper-container {
+    .swiper-button-prev {
+      top: 5.5rem;
+      left: 12rem;
+      &:after {
+        font-size: 1.4rem;
+      }
+    }
+
+    .swiper-button-next {
+      top: 5.5rem;
+      left: 14rem;
+      &:after {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

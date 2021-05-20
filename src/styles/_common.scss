@@ -1,0 +1,8 @@
+@mixin actionButtons($border, $color, $bgColor, $borderRad, $height, $width) {
+  border: $border;
+  color: $color;
+  background-color: $bgColor;
+  border-radius: $borderRad;
+  height: $height;
+  width: $width;
+}

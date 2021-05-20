@@ -1,0 +1,110 @@
+@import './../../../styles/variables';
+
+.services__container {
+  width: 100%;
+  position: relative;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    padding: 27rem 37rem 0rem 37rem;
+    &--title {
+      font-size: 8rem;
+      color: $secondaryWhite;
+      letter-spacing: 1.74px;
+    }
+    &__textBlock {
+      display: grid;
+      grid-auto-flow: column;
+      place-content: center;
+      gap: 3rem;
+
+      &--text {
+        font-size: 1.6rem;
+        color: $secondaryBorderGrey;
+      }
+    }
+    &__blueLineBlock {
+      margin-left: 37rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1679px) {
+  .services__container {
+    &__head {
+      padding: 17rem 16rem 0rem 16rem;
+
+      &__textBlock {
+        &--text {
+          font-size: 1.4rem;
+        }
+      }
+      &__blueLineBlock {
+        margin-left: 16rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .services__container {
+    &__head {
+      padding: 11rem 16rem 0rem 16rem;
+
+      &--title {
+        font-size: 3.6rem;
+      }
+      &__textBlock {
+        display: none;
+      }
+      &__blueLineBlock {
+        margin-left: 16rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .services__container {
+    &__head {
+      padding: 10rem 0.4rem 0rem 0.4rem;
+
+      &__textBlock {
+        gap: 1rem;
+
+        &--text {
+          font-size: 1.4rem;
+        }
+      }
+      &__blueLineBlock {
+        margin-left: 0.4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .services__container {
+    &__head {
+      padding: 4rem 1.6rem 0rem 1.6rem;
+
+      &--title {
+        font-size: 2.4rem;
+        letter-spacing: 0.48px;
+      }
+
+      &__textBlock {
+        display: grid;
+        gap: 1rem;
+        &--text {
+          font-size: 1.3rem;
+        }
+      }
+      &__blueLineBlock {
+        margin-left: 2.5rem;
+        margin-top: -1.4rem;
+      }
+    }
+  }
+}

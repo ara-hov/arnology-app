@@ -1,0 +1,35 @@
+@import '../../../styles/variables.scss';
+
+.navbar {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3.5rem;
+
+  &__selected {
+    color: $primaryLightGreenBlue !important;
+    -webkit-text-fill-color: unset !important;
+  }
+
+  a {
+    font-size: 16px;
+    line-height: 1.63;
+    color: $secondaryWhite;
+    text-decoration: none;
+    background: linear-gradient(
+      to right,
+      $primaryLightGreenBlue,
+      $primaryLightGreenBlue 50%,
+      $secondaryWhite 50%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 375ms ease;
+    text-decoration: none; // text decorations are clipped in WebKit browsers
+    &:hover {
+      background-position: 0 100%;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@import '../../styles/common.scss';
+@import '../../styles/variables.scss';
+
+.header__container {
+  display: grid;
+  grid-template-columns: 1.3fr 1.5fr;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  left: 13.3vw;
+  right: 14.1vw;
+  top: 5%;
+  gap: 11vw;
+  a {
+    svg {
+      width: 15vw;
+    }
+  }
+  &__last {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    align-items: center;
+    gap: 2vw;
+    justify-items: flex-end;
+  }
+
+  &__mobile {
+    display: none;
+  }
+  &__mobile__menu {
+    &--logo {
+      display: none;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    @include actionButtons(
+      1px solid $primaryLightGreenBlue,
+      $primaryLightGreenBlue,
+      transparent,
+      5px,
+      48px,
+      17.5rem
+    );
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header__container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    grid-template-columns: unset;
+    a {
+      svg {
+        width: 23vw;
+      }
+    }
+    &__last {
+      display: none;
+    }
+
+    &__mobile {
+      display: block;
+
+      .hamburger-react {
+        left: unset;
+        right: unset;
+        z-index: 2;
+
+        div {
+          div {
+            &:hover {
+              background-color: $primaryLightGreenBlue;
+            }
+          }
+        }
+      }
+    }
+
+    &__mobile__menu {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      background-color: #111517;
+      height: 100%;
+      width: 100%;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      &--logo {
+        position: absolute;
+        display: block;
+        top: 5%;
+        left: 5%;
+      }
+    }
+
+    &__mobile__menu__hide {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header__container {
+    left: 5.3vw;
+    right: 5.1vw;
+    a {
+      svg {
+        width: 16rem;
+      }
+    }
+    &__mobile__menu {
+      &--logo {
+        display: none;
+      }
+      .hamburger-react {
+        left: 5rem;
+      }
+    }
+  }
+}

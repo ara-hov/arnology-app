@@ -1,0 +1,39 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+@font-face {
+  font-family: 'Trump gothic east bold';
+  src: url('./fonts/trump_gothic_east_bold.ttf');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./fonts/Rubik-Regular.ttf');
+}
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: Trump gothic east bold, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}

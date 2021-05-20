@@ -1,0 +1,66 @@
+@import '../../../styles/variables';
+.contentTab {
+  &__container {
+    display: grid;
+    width: 28rem;
+    place-content: center;
+    gap: 10rem;
+    border: 1px solid $slideContentTabBorder;
+    padding: 2.6rem;
+    color: $secondaryWhite;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      -webkit-transition: background 0.21s linear;
+      transition: background 0.21s linear;
+      background-color: $primaryLightGreenBlue;
+      .contentTab__container__phoneIcon {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+    }
+    .contentTab__container__phoneIcon {
+      display: none;
+    }
+
+    &__title {
+      display: grid;
+      gap: 3.8rem;
+      h3 {
+        font-size: 2rem;
+        width: 60%;
+      }
+      &--text {
+        font-size: 1.4rem;
+      }
+    }
+    &__info {
+      p {
+        font-size: 1.4rem;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .contentTab {
+    &__container {
+      width: 24rem;
+      gap: 8rem;
+      &__title {
+        gap: 3.7rem;
+
+        h3 {
+          font-size: 1.8rem;
+          width: 64%;
+        }
+        &--text {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

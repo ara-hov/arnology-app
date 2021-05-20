@@ -1,0 +1,52 @@
+.homeContainerTab {
+  display: grid;
+  grid-auto-flow: column;
+  width: 80%;
+  &__desc {
+    display: grid;
+    align-self: end;
+    gap: 2rem;
+    svg {
+      display: inline-block;
+    }
+    &--info {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .homeContainerTab {
+    &__desc {
+      svg {
+        width: 5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .homeContainerTab {
+    &__desc {
+      svg {
+        width: 4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homeContainerTab {
+    display: grid;
+
+    &__desc {
+      gap: 0rem;
+      svg {
+        width: 2.6rem;
+      }
+      &--info {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

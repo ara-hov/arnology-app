@@ -1,0 +1,119 @@
+@import '../../../styles/common';
+@import '../../../styles/variables';
+.estimate__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 26rem 27rem 18rem 37rem;
+
+  &__text {
+    &--title {
+      font-size: 8rem;
+      opacity: 0.9;
+      color: $secondaryWhite;
+      letter-spacing: 1.74px;
+      margin-top: 6rem;
+    }
+    &--subTitle {
+      width: 28.8rem;
+      color: $secondaryWhite;
+      font-size: 1.8rem;
+      margin-bottom: 4rem;
+    }
+    &__button {
+      cursor: pointer;
+      font-size: 1.6rem;
+      @include actionButtons(
+        1px solid $primaryLightGreenBlue,
+        $secondaryWhite,
+        $primaryLightGreenBlue,
+        4px,
+        6.4rem,
+        22.4rem
+      );
+    }
+  }
+  &__image {
+    width: fit-content;
+    img {
+      width: 58rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1679px) {
+  .estimate__container {
+    padding: 26rem 12rem 18rem 16rem;
+  }
+}
+
+@media screen and (max-width: 1325px) {
+  .estimate__container {
+    padding: 26rem 4rem 18rem 16rem;
+    &__text {
+      &--title {
+        font-size: 7.4rem;
+        margin-top: 2rem;
+      }
+    }
+    &__image {
+      width: fit-content;
+      img {
+        width: 44rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .estimate__container {
+    padding: 18rem 4rem 18rem 16rem;
+    &__text {
+      &--title {
+        font-size: 6rem;
+        margin-top: 2rem;
+      }
+
+      &--subTitle {
+        width: 25rem;
+        font-size: 1.6rem;
+      }
+      &__button {
+        cursor: pointer;
+        font-size: 1.6rem;
+      }
+    }
+    &__image {
+      width: fit-content;
+      img {
+        width: 40rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .estimate__container {
+    padding: 18rem 3rem 18rem 16rem;
+    &__text {
+      &--title {
+        font-size: 5rem;
+        margin-top: 2rem;
+      }
+
+      &--subTitle {
+        width: 25.5rem;
+        font-size: 1.6rem;
+      }
+      &__button {
+        cursor: pointer;
+        font-size: 1.6rem;
+      }
+    }
+    &__image {
+      width: fit-content;
+      img {
+        width: 40rem;
+      }
+    }
+  }
+}
