@@ -25,3 +25,10 @@ export type servicesType = {
   title: string;
   desc: string;
 };
+
+export type testimonialsType = {
+  id?: number | string;
+  info?: string;
+  name?: string;
+  profession?: string;
+};

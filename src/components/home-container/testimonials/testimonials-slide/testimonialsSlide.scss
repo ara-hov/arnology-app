@@ -1,0 +1,20 @@
+.testimonials__slide {
+  &--info {
+    font-size: 3.2rem;
+    line-height: 1.41;
+    letter-spacing: 0.45px;
+  }
+  &--name {
+    font-size: 1.6rem;
+    line-height: 1.63;
+    letter-spacing: 0.22px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &--profession {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 1.86;
+    letter-spacing: 0.2px;
+  }
+}
