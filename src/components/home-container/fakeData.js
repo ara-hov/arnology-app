@@ -187,3 +187,24 @@ export const technologies = [
     ],
   },
 ];
+
+export const testimonials = [
+  {
+    id: 1,
+    info: '“The Arnology engineers are excellent and had tons of experience building apps. We felt like a real team from day one.”',
+    name: 'SAUL GOODMAN',
+    profession: 'FORMER DIRECTOR OF ENGINEERING AT FACEBOOK AI RESEARCH',
+  },
+  {
+    id: 2,
+    info: '“The Arnology engineers are excellent and had tons of experience building apps. We felt like a real team from day one.”',
+    name: 'SAUL GOODMAN',
+    profession: 'FORMER DIRECTOR OF ENGINEERING AT FACEBOOK AI RESEARCH',
+  },
+  {
+    id: 3,
+    info: '“The Arnology engineers are excellent and had tons of experience building apps. We felt like a real team from day one.”',
+    name: 'SAUL GOODMAN',
+    profession: 'FORMER DIRECTOR OF ENGINEERING AT FACEBOOK AI RESEARCH',
+  },
+];
