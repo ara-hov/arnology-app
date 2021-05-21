@@ -27,7 +27,31 @@ const Services = () => {
         <BlueLine />
       </div>
 
-      <ServicesSwiper>
+      <ServicesSwiper
+        spaceBetween={5}
+        centeredSlides={true}
+        navigation={true}
+        className='mySwiper'
+        breakpoints={{
+          1680: {
+            width: 1000,
+            slidesPerView: 3,
+          },
+          768: {
+            width: 630,
+            slidesPerView: 2,
+          },
+
+          361: {
+            width: 310,
+            slidesPerView: 1,
+          },
+          320: {
+            width: 270,
+            slidesPerView: 1,
+          },
+        }}
+      >
         {servicesData.map((item: servicesType) => {
           return (
             <SwiperSlide key={item.id}>
