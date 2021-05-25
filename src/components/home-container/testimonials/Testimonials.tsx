@@ -1,19 +1,20 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper/core';
+import { SwiperSlide } from 'swiper/react';
 import { testimonialsType } from '../../model';
 import Title from '../../reusable-components/title/Title';
 import { testimonials } from '../fakeData';
 import TestimonialsSlide from './testimonials-slide/TestimonialsSlide';
 import './testimonials.scss';
-import 'swiper/components/pagination/pagination.min.css';
-
-SwiperCore.use([Pagination]);
+import ReusableSwiper from '../../reusable-components/swiper/ReusableSwiper';
 
 const Testimonials = () => {
   return (
     <div className='testimonials__container'>
       <Title title='Testimonials' className='testimonials__container--title' />
-      <Swiper pagination={true}>
+      <ReusableSwiper
+        pagination={{
+          clickable: true,
+        }}
+      >
         {testimonials.map((item: testimonialsType) => {
           return (
             <SwiperSlide key={item.id}>
@@ -25,7 +26,7 @@ const Testimonials = () => {
             </SwiperSlide>
           );
         })}
-      </Swiper>
+      </ReusableSwiper>
     </div>
   );
 };

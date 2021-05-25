@@ -3,7 +3,7 @@ import { servicesData } from '../fakeDataServices';
 import SlideContentTab from './../slideContentTab/SlideContentTab';
 import RightArrowIcon from '../../../icon-containers/RightArrowIcon';
 import BlueLine from '../../../reusable-components/blueLine/BlueLine';
-import ServicesSwiper from '../../../reusable-components/swiper/ServicesSwiper';
+import ReusableSwiper from '../../../reusable-components/swiper/ReusableSwiper';
 import { servicesType } from '../../../model';
 import './services.scss';
 
@@ -26,10 +26,11 @@ const Services = () => {
         <BlueLine />
       </div>
 
-      <ServicesSwiper
+      <ReusableSwiper
         spaceBetween={5}
         centeredSlides={true}
         navigation={true}
+        pagination={false}
         className='mySwiper'
         breakpoints={{
           1680: {
@@ -58,7 +59,7 @@ const Services = () => {
             </SwiperSlide>
           );
         })}
-      </ServicesSwiper>
+      </ReusableSwiper>
     </div>
   );
 };

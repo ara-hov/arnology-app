@@ -32,3 +32,10 @@ export type testimonialsType = {
   name?: string;
   profession?: string;
 };
+
+export type worksType = {
+  id?: string;
+  title: string;
+  info: string;
+  img: string;
+};

@@ -17,6 +17,7 @@ import ContactUs from './contact-us/ContactUs';
 import './homeContainer.scss';
 import OurServices from './our-services/OurServices';
 import Testimonials from './testimonials/Testimonials';
+import OurWorks from './our-works/OurWorks';
 
 const HomeContainer = () => {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
@@ -124,6 +125,7 @@ const HomeContainer = () => {
       </SliderContainer>
       <OurServices />
       <Testimonials />
+      <OurWorks />
       <ContactUs />
     </div>
   );

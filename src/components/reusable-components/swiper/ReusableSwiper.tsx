@@ -1,18 +1,20 @@
 import { Swiper } from 'swiper/react';
-import SwiperCore, { Navigation } from 'swiper';
+import SwiperCore, { Navigation, Pagination } from 'swiper';
 import './swiper.scss';
 
 import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.min.css';
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Pagination]);
 
-const ServicesSwiper = ({
+const ReusableSwiper = ({
   children,
-  spaceBetween,
-  centeredSlides,
-  navigation,
-  breakpoints,
+  spaceBetween = 1,
+  centeredSlides = false,
+  navigation = false,
+  breakpoints = {},
   className,
+  pagination = false,
 }: any) => {
   return (
     <>
@@ -21,6 +23,7 @@ const ServicesSwiper = ({
         centeredSlides={centeredSlides}
         className={className}
         navigation={navigation}
+        pagination={pagination}
         breakpoints={breakpoints}
       >
         {children}
@@ -29,4 +32,4 @@ const ServicesSwiper = ({
   );
 };
 
-export default ServicesSwiper;
+export default ReusableSwiper;
