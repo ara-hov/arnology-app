@@ -6,6 +6,7 @@ import Navbar from '../home-container/navbar/Navbar';
 import Button from '../reusable-components/button/Button';
 import MobileNavbar from '../mobile-navbar/MobileNavbar';
 import './header.scss';
+import Select from '../reusable-components/select/Select';
 
 const Header: FC = () => {
   const [color, setColor] = useState('#ffffff');
@@ -14,6 +15,8 @@ const Header: FC = () => {
   const shoWMenu = () => {
     setOpen(!isOpen);
   };
+
+  const languages = ['EN', 'RU', 'HY'];
 
   return (
     <div className='header__container'>
@@ -26,6 +29,11 @@ const Header: FC = () => {
           className='header__container__button'
           buttonText='Get an estimate'
         ></Button>
+        <Select className='header__container__last__select'>
+          {languages.map((language: string) => {
+            return <option>{language}</option>;
+          })}
+        </Select>
       </div>
       <div
         className='header__container__mobile'
