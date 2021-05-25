@@ -7,3 +7,4 @@ declare module '*.mp4' {
 
 declare module 'react-reveal/Fade';
 declare module 'react-reveal/Zoom';
+declare module '3d-react-carousal';

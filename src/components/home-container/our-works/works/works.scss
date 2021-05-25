@@ -5,6 +5,17 @@
   width: 50%;
   padding: 16rem 0 0 24rem;
 
+  .slider-single-content {
+    box-shadow: none !important;
+  }
+  .slider-left {
+    display: none !important;
+  }
+
+  .slider-right {
+    display: none !important;
+  }
+
   &--title {
     color: $secondaryWhite;
     opacity: 0.9;
@@ -132,8 +143,13 @@
     &--text {
       font-size: 1.4rem;
     }
+
+    &--button {
+      margin-top: 4.6rem;
+    }
     &__slider {
       display: block;
+      margin-top: 5rem;
     }
   }
 }

@@ -1,10 +1,24 @@
 import Button from '../../../reusable-components/button/Button';
 import Title from '../../../reusable-components/title/Title';
 import './works.scss';
+import { Carousel } from '3d-react-carousal';
 import { worksData } from '../worksFakeData';
 import WorksContentTab from '../worksContentTab/WorksContentTab';
 
 const Works = () => {
+  let slides: any = [];
+
+  worksData.forEach((item) => {
+    slides.push(
+      <WorksContentTab
+        title={item.title}
+        info={item.info}
+        img={item.img}
+        key={item.id}
+      />
+    );
+  });
+
   return (
     <div className='works__container'>
       <Title title='OUR WORKS' className='works__container--title' />
@@ -15,15 +29,7 @@ const Works = () => {
         work speak for ourselves!
       </p>
       <div className='works__container__slider'>
-        {/* {worksData.map((item) => {
-          return (
-            <WorksContentTab
-              title={item.title}
-              info={item.info}
-              img={item.img}
-            />
-          );
-        })} */}
+        <Carousel slides={slides} autoplay={true} />
       </div>
       <Button buttonText='SEE PORTFOLIO' className='works__container--button' />
     </div>
