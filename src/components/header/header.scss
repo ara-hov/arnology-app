@@ -18,10 +18,22 @@
   }
   &__last {
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr;
     align-items: center;
     gap: 2vw;
     justify-items: flex-end;
+    &__select {
+      color: $secondaryWhite;
+      border: 0;
+      width: 7.8rem;
+      &:focus-visible {
+        outline: none;
+      }
+      option {
+        color: $primaryDarkBlack;
+        font-family: 'Rubik';
+      }
+    }
   }
 
   &__mobile {

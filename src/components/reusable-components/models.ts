@@ -77,3 +77,7 @@ export interface TitleProps {
   title?: string;
   className?: string;
 }
+export interface SelectProps {
+  children?: ReactNode;
+  className?: string;
+}
