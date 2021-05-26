@@ -18,33 +18,52 @@ import './homeContainer.scss';
 import OurServices from './our-services/OurServices';
 import Testimonials from './testimonials/Testimonials';
 import OurWorks from './our-works/OurWorks';
+import { VideoSeekSlider } from 'react-video-seek-slider';
 
 const HomeContainer = () => {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
+  const [videoSettings, setVideoSettings] = useState<any>({
+    currentTime: 0,
+    maxTime: 0,
+  });
+
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const openVideoPopup = () => {
     setIsPopupOpen(!isPopupOpen);
+    console.log(videoRef?.current, '1111111111111111111111111111111');
   };
 
   const closePopup = () => {
     setIsPopupOpen(false);
   };
 
-  const playVideo = useCallback(() => {
-    setIsPlaying(!isPlaying);
-    if (isPlaying) {
-      videoRef?.current?.play();
-    } else {
-      videoRef?.current?.pause();
+  const playVideo = useCallback(
+    (e) => {
+      setIsPlaying(!isPlaying);
+      if (isPlaying) {
+        videoRef?.current?.play();
+      } else {
+        videoRef?.current?.pause();
+      }
+      setVideoSettings({
+        currentTime: e.target.currentTime,
+        maxTime: e.target.currentTime,
+      });
+    },
+    [isPlaying]
+  );
+
+  useEffect(() => {
+    if (!isPlaying) {
+      console.log(
+        videoRef?.current,
+        '---------------1111111111111111111111111111111'
+      );
     }
   }, [isPlaying]);
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
 
   return (
     <div className='homeContainer__wrapper'>
@@ -98,6 +117,21 @@ const HomeContainer = () => {
           autoPlay={!isPlaying ? true : false}
           controls={false}
           onClick={playVideo}
+        />
+        <VideoSeekSlider
+          max={videoSettings.maxTime}
+          currentTime={videoSettings.currentTime}
+          progress={1000}
+          onChange={(time) => {
+            setVideoSettings({
+              ...videoSettings,
+              currentTime: time,
+            });
+            console.log(time, 'timememememem77777777777777777777777');
+          }}
+          offset={0}
+          secondsPrefix='00:00:'
+          minutesPrefix='00:'
         />
       </Popup>
       <SliderContainer

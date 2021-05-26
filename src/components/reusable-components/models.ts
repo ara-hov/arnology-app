@@ -28,7 +28,7 @@ export interface VideoContainerProps {
   muted?: boolean;
   controls?: boolean;
   ref?: LegacyRef<HTMLVideoElement> | any;
-  onClick?: () => void;
+  onClick?: (arg0?: any) => void;
 }
 
 export interface SliderContainerProps {
