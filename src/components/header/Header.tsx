@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Twirl as Hamburger } from 'hamburger-react';
 import Logo from '../../components/icon-containers/Logo';
@@ -11,6 +11,12 @@ import Select from '../reusable-components/select/Select';
 const Header: FC = () => {
   const [color, setColor] = useState('#ffffff');
   const [isOpen, setOpen] = useState(false);
+
+  useEffect(() => {
+    isOpen
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'unset');
+  }, [isOpen]);
 
   const shoWMenu = () => {
     setOpen(!isOpen);
