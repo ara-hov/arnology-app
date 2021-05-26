@@ -1,4 +1,4 @@
-@import './../../../styles/variables';
+@import './../../../../styles/variables';
 
 .services__container {
   width: 100%;
@@ -56,7 +56,7 @@
         font-size: 3.6rem;
       }
       &__textBlock {
-        display: none;
+        // display: none;
       }
       &__blueLineBlock {
         margin-left: 16rem;
@@ -65,20 +65,20 @@
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 767px) {
   .services__container {
     &__head {
-      padding: 10rem 0.4rem 0rem 0.4rem;
+      padding: 8rem 1.6rem 0rem 1.6rem;
+      &--title {
+        font-size: 3rem;
+      }
 
       &__textBlock {
+        // display: grid;
         gap: 1rem;
-
-        &--text {
-          font-size: 1.4rem;
-        }
       }
       &__blueLineBlock {
-        margin-left: 0.4rem;
+        margin-left: 2rem;
       }
     }
   }
@@ -95,8 +95,6 @@
       }
 
       &__textBlock {
-        display: grid;
-        gap: 1rem;
         &--text {
           font-size: 1.3rem;
         }

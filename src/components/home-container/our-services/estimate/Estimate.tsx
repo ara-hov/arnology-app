@@ -1,15 +1,17 @@
-import React from 'react';
-import BlueLine from '../../reusable-components/blueLine/BlueLine';
-import Button from '../../reusable-components/button/Button';
+import BlueLine from '../../../reusable-components/blueLine/BlueLine';
+import Button from '../../../reusable-components/button/Button';
+import ChareEstimate from '../../../../assets/images/chart_estimate.png';
 import './estimate.scss';
-import ChareEstimate from './../../../assets/images/chart_estimate.png';
 
 const Estimate = () => {
   return (
     <div className='estimate__container'>
       <div className='estimate__container__text'>
         <h1 className='estimate__container__text--title'>GET AN ESTIMATE</h1>
-        <BlueLine />
+        <div className='estimate__container__text--blueLine'>
+          {' '}
+          <BlueLine />
+        </div>
         <p className='estimate__container__text--subTitle'>
           Interested in discussing a project? Let’s build something great.
         </p>

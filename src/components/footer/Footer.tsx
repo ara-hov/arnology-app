@@ -12,25 +12,31 @@ const Footer = () => {
       <div className='footer__wrapper__content'>
         <div className='footer__wrapper__content__info'>
           <h6 className='footer__wrapper__content__info--title'>Contacts</h6>
-          {contacts?.map((item) => {
+          {contacts?.map((item, i) => {
             return (
-              <p className='footer__wrapper__content__info--text'>{item}</p>
+              <p key={i} className='footer__wrapper__content__info--text'>
+                {item}
+              </p>
             );
           })}
         </div>
         <div className='footer__wrapper__content__info'>
           <h6 className='footer__wrapper__content__info--title'>Company</h6>
-          {company?.map((item) => {
+          {company?.map((item, i) => {
             return (
-              <p className='footer__wrapper__content__info--text'>{item}</p>
+              <p key={i} className='footer__wrapper__content__info--text'>
+                {item}
+              </p>
             );
           })}
         </div>
         <div className='footer__wrapper__content__info'>
           <h6 className='footer__wrapper__content__info--title'>Services</h6>
-          {services?.map((item) => {
+          {services?.map((item, i) => {
             return (
-              <p className='footer__wrapper__content__info--text'>{item}</p>
+              <p key={i} className='footer__wrapper__content__info--text'>
+                {item}
+              </p>
             );
           })}
         </div>
