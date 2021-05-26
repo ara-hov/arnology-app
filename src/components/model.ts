@@ -39,3 +39,8 @@ export type worksType = {
   info: string;
   img: string;
 };
+
+export interface SelectType {
+  value: string;
+  label: any | ReactNode;
+}

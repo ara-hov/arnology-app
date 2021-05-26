@@ -1,22 +1,35 @@
 import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Twirl as Hamburger } from 'hamburger-react';
+import Dropdown from 'react-dropdown';
 import Logo from '../../components/icon-containers/Logo';
 import Navbar from '../home-container/navbar/Navbar';
 import Button from '../reusable-components/button/Button';
 import MobileNavbar from '../mobile-navbar/MobileNavbar';
+import { SelectType } from '../model';
 import './header.scss';
-import Select from '../reusable-components/select/Select';
 
 const Header: FC = () => {
   const [color, setColor] = useState('#ffffff');
   const [isOpen, setOpen] = useState(false);
+  const [lang, setLang] = useState({ value: 'en', label: 'EN' });
+  const [langOptions, setLangOptions] = useState([
+    { value: 'ru', label: 'RU' },
+    { value: 'hy', label: 'HY' },
+    { value: 'fr', label: 'FR' },
+  ]);
 
   const shoWMenu = () => {
     setOpen(!isOpen);
   };
 
-  const languages = ['EN', 'RU', 'HY'];
+  const handleLangChange = (option: SelectType) => {
+    const filteredLang = langOptions.filter(
+      (langOption) => langOption.value !== option.value
+    );
+    setLangOptions([...filteredLang, lang]);
+    setLang(option);
+  };
 
   return (
     <div className='header__container'>
@@ -29,11 +42,12 @@ const Header: FC = () => {
           className='header__container__button'
           buttonText='Get an estimate'
         ></Button>
-        <Select className='header__container__last__select'>
-          {languages.map((language: string) => {
-            return <option>{language}</option>;
-          })}
-        </Select>
+        <Dropdown
+          options={langOptions}
+          value={lang}
+          onChange={(option) => handleLangChange(option)}
+        />
+        ;
       </div>
       <div
         className='header__container__mobile'
