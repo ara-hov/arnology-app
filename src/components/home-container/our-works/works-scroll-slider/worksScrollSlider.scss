@@ -2,8 +2,8 @@
 
 .worksSlider__container {
   width: 50%;
-  height: 74vh;
-  padding: 8rem 8rem 0 15rem;
+  height: 86vh;
+  padding: 8rem 4rem 0 10rem;
   display: grid;
   grid-template-columns: 29% 29% 29%;
   grid-gap: 10px;
@@ -23,14 +23,14 @@
 @media screen and (max-width: 1550px) {
   .worksSlider__container {
     width: 54%;
-    padding: 4rem 4rem 0 7rem;
+    padding: 4rem 0rem 0 0rem;
     grid-template-columns: 32% 32% 32%;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .worksSlider__container {
-    padding: 4rem 2rem 0 3rem;
+    padding: 4rem 2rem 0 2rem;
     grid-template-columns: 50% 50%;
   }
 }

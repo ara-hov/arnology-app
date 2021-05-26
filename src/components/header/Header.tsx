@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Twirl as Hamburger } from 'hamburger-react';
 import Dropdown from 'react-dropdown';
@@ -18,6 +18,12 @@ const Header: FC = () => {
     { value: 'hy', label: 'HY' },
     { value: 'fr', label: 'FR' },
   ]);
+
+  useEffect(() => {
+    isOpen
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'unset');
+  }, [isOpen]);
 
   const shoWMenu = () => {
     setOpen(!isOpen);

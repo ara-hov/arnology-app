@@ -66,6 +66,12 @@
 
 @media screen and (max-width: 1550px) {
   .works__container {
+    padding: 8rem 0 0 12rem;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .works__container {
     width: 46%;
     padding: 8rem 0 0 12rem;
 
@@ -95,7 +101,7 @@
     padding: 10rem 0 0 10rem;
 
     &--title {
-      font-size: 7rem;
+      font-size: 6rem;
       line-height: 1.22;
       letter-spacing: 1.44px;
     }
