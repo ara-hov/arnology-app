@@ -31,7 +31,10 @@
     &--logo {
       display: none;
     }
-  }
+    &__hide{
+      display: none;
+    }
+  }  
 
   &__button {
     cursor: pointer;

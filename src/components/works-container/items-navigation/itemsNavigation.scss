@@ -1,0 +1,91 @@
+@import "../../../styles/variables";
+@import "../../../styles/common";
+
+.wrapper__navigation__wrapper {
+  @include displayCenterGrid(auto auto auto auto auto auto auto);
+  grid-column-gap: 2.2rem;
+  &__item {
+    &--button {
+      @include textStyle($primaryDarkGrey, 1.8rem, 1.44, 0.025rem);
+      border: none;
+      background: transparent;
+      padding: 2rem 0;
+      cursor: pointer;
+    }
+
+    &--buttonActive {
+      @include textStyle($primaryDarkGrey, 1.8rem, 1.44, 0.025rem);
+      border: none;
+      background: transparent;
+      padding: 2rem 0;
+      color: $primiaryRedRibon;
+    }
+    &--button:hover::before,
+    &--buttonActive:hover::before {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+    &--button::before,
+    &--buttonActive::before {
+      content: attr(data-text);
+      position: absolute;
+      transform: translate3d(0, 17px, 0);
+      color: $primiaryRedRibon;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    }
+    &--button span,
+    &--buttonActive span {
+      display: inline-block;
+      transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    }
+    &--button:hover span,
+    &--buttonActive:hover span {
+      opacity: 0;
+      transform: translate3d(0, -16px, 0);
+    }
+  }
+}
+
+.wrapper__closeButton {
+  display: none;
+  cursor: pointer;
+  &__close--first {
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+    top: 3.2rem;
+    font-size: 44px;
+    font-weight: 100;
+    font-family: "slick";
+    padding: 12px 16px;
+    transform: translate(0%, -50%);
+  }
+  &__close--first:hover {
+    color: $primiaryRedRibon;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: stretch;
+    &__closeButton {
+      display: inline-block;
+      padding: 2rem 0;
+      text-align: right;
+      color: aliceblue;
+    }
+    &__navigation__wrapper {
+      @include displayCenterGrid(auto);
+      justify-content: space-between;
+
+      &__item--button {
+        color: azure;
+        background-color: $primaryWoodSmoke;
+      }
+    }
+  }
+}
