@@ -28,6 +28,8 @@ const HomeContainer = () => {
 
   const [currentVideoTime, setCurrentVideoTime] = useState<any>(null);
 
+  console.log(videoRef, 'videoRef');
+
   const openVideoPopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
