@@ -71,7 +71,7 @@ const Header: FC = () => {
         }
       >
         <Logo className='header__container__mobile__menu--logo' />
-        <MobileNavbar shoWMenu={shoWMenu} />
+        <MobileNavbar shoWMenu={shoWMenu} selectedLang={lang.label} />
       </div>
     </div>
   );

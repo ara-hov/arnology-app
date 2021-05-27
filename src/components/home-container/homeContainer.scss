@@ -119,6 +119,36 @@
     }
   }
   &__popup {
+    &__videoPopup {
+      video {
+        width: 75%;
+        height: 72%;
+        left: 13%;
+        top: 13%;
+        object-fit: contain;
+        position: absolute;
+      }
+      progress {
+        position: absolute;
+        top: 90vh;
+        width: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 11rem;
+        cursor: pointer;
+        transform: translate(-20%, -50%);
+        @extend %PlayButtonProps;
+      }
+      .hide {
+        display: none;
+      }
+    }
     &__video {
       width: 75%;
       height: 72%;
@@ -220,9 +250,6 @@
         top: 74%;
         left: 0;
         right: 0;
-        svg {
-          width: 8rem;
-        }
       }
     }
     &__video__info {
@@ -235,6 +262,12 @@
       &--videoPlay {
         width: 15vw;
         left: 44%;
+      }
+      &__videoPopup {
+        .play {
+          width: 6rem;
+          transform: translate(-30%, -60%);
+        }
       }
     }
   }
