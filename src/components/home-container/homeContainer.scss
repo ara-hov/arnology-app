@@ -119,6 +119,36 @@
     }
   }
   &__popup {
+    &__videoPopup {
+      video {
+        width: 75%;
+        height: 72%;
+        left: 13%;
+        top: 13%;
+        object-fit: contain;
+        position: absolute;
+      }
+      progress {
+        position: absolute;
+        top: 90vh;
+        width: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 11rem;
+        cursor: pointer;
+        transform: translate(-20%, -50%);
+        @extend %PlayButtonProps;
+      }
+      .hide {
+        display: none;
+      }
+    }
     &__video {
       width: 75%;
       height: 72%;
@@ -176,10 +206,7 @@
     }
     &__popup {
       &--videoPlay {
-        transform: translate(-10%, 20%);
-        width: 20vw;
         left: 45%;
-        top: 40%;
       }
     }
   }
@@ -223,15 +250,24 @@
         top: 74%;
         left: 0;
         right: 0;
-        svg {
-          width: 8rem;
-        }
       }
     }
     &__video__info {
       text-align: center;
       &--text {
         font-size: 1.2rem;
+      }
+    }
+    &__popup {
+      &--videoPlay {
+        width: 15vw;
+        left: 44%;
+      }
+      &__videoPopup {
+        .play {
+          width: 6rem;
+          transform: translate(-30%, -60%);
+        }
       }
     }
   }

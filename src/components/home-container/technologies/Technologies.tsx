@@ -1,4 +1,4 @@
-import BlueLine from '../reusable-components/blueLine/BlueLine';
+import BlueLine from '../../reusable-components/blueLine/BlueLine';
 import './technologies.scss';
 
 const Technologies = () => {

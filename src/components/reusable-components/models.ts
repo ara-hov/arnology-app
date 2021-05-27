@@ -28,7 +28,7 @@ export interface VideoContainerProps {
   muted?: boolean;
   controls?: boolean;
   ref?: LegacyRef<HTMLVideoElement> | any;
-  onClick?: () => void;
+  onClick?: (arg0?: any) => void;
 }
 
 export interface SliderContainerProps {
@@ -75,5 +75,9 @@ export interface InputProps {
 
 export interface TitleProps {
   title?: string;
+  className?: string;
+}
+export interface SelectProps {
+  children?: ReactNode;
   className?: string;
 }
