@@ -29,11 +29,14 @@ const HomeContainer = () => {
     maxTime: 0,
   });
 
+  console.log(videoSettings, 'videoSettings');
+
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  console.log(videoRef, 'videoRef');
 
   const openVideoPopup = () => {
     setIsPopupOpen(!isPopupOpen);
-    console.log(videoRef?.current, '1111111111111111111111111111111');
   };
 
   const closePopup = () => {
@@ -50,9 +53,10 @@ const HomeContainer = () => {
       }
       setVideoSettings({
         currentTime: e.target.currentTime,
-        maxTime: e.target.currentTime,
+        maxTime: e.target.duration,
       });
     },
+
     [isPlaying]
   );
 
@@ -121,8 +125,8 @@ const HomeContainer = () => {
         <VideoSeekSlider
           max={videoSettings.maxTime}
           currentTime={videoSettings.currentTime}
-          progress={1000}
-          onChange={(time) => {
+          progress={videoSettings.currentTime}
+          onChange={(time = 0) => {
             setVideoSettings({
               ...videoSettings,
               currentTime: time,
