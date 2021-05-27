@@ -2,14 +2,9 @@
 import { forwardRef } from 'react';
 import { VideoContainerProps } from '../models';
 import './videoContainer.scss';
-import { useEffect } from 'react';
 
 const VideoContainer = forwardRef<HTMLVideoElement, VideoContainerProps>(
   ({ className, autoPlay, loop, muted, controls, preload, onClick }, ref) => {
-    useEffect(() => {
-      console.log(ref);
-    }, [ref]);
-
     return (
       <video
         className={className ? className : 'background__video'}

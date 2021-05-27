@@ -41,3 +41,7 @@ h6 {
 html {
   font-size: 62.5%;
 }
+
+.ReactModal__Content:focus-visible {
+  outline: 0;
+}

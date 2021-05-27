@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import ContentDescription from '../reusable-components/content-description/ContentDescription';
 import VideoContainer from '../reusable-components/video-container/VideoContainer';
 import PlayIcon from '../icon-containers/PlayIcon';
@@ -14,57 +14,42 @@ import RightArrowIcon from '../icon-containers/RightArrowIcon';
 import LeftArrowIcon from '../icon-containers/LeftArrowIcon';
 import { technologiesType } from '../model';
 import ContactUs from './contact-us/ContactUs';
-import './homeContainer.scss';
 import OurServices from './our-services/OurServices';
 import Testimonials from './testimonials/Testimonials';
 import OurWorks from './our-works/OurWorks';
-import { VideoSeekSlider } from 'react-video-seek-slider';
+import ReactPlayer from 'react-player';
+import './homeContainer.scss';
 
 const HomeContainer = () => {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
-  const [videoSettings, setVideoSettings] = useState<any>({
-    currentTime: 0,
-    maxTime: 0,
-  });
+  const videoRef = useRef<any>();
 
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [currentVideoTime, setCurrentVideoTime] = useState<any>(null);
 
   const openVideoPopup = () => {
     setIsPopupOpen(!isPopupOpen);
-    console.log(videoRef?.current, '1111111111111111111111111111111');
   };
 
   const closePopup = () => {
     setIsPopupOpen(false);
   };
 
-  const playVideo = useCallback(
-    (e) => {
-      setIsPlaying(!isPlaying);
-      if (isPlaying) {
-        videoRef?.current?.play();
-      } else {
-        videoRef?.current?.pause();
-      }
-      setVideoSettings({
-        currentTime: e.target.currentTime,
-        maxTime: e.target.currentTime,
-      });
-    },
-    [isPlaying]
-  );
-
-  useEffect(() => {
-    if (!isPlaying) {
-      console.log(
-        videoRef?.current,
-        '---------------1111111111111111111111111111111'
-      );
+  const playVideo = () => {
+    setIsPlaying(!isPlaying);
+    if (isPlaying) {
+      videoRef?.current?.play();
+    } else {
+      videoRef?.current?.pause();
     }
-  }, [isPlaying]);
+  };
 
+  const [played, setPlayed] = useState(0);
+  const [playing, setPlaying] = useState<boolean>(false);
+  const [seeking, setSeeking] = useState(false);
+  const url =
+    'https://strvothers.s3.amazonaws.com/web-videos/website-home-background-1080p.mp4';
   return (
     <div className='homeContainer__wrapper'>
       <div className='homeContainer__wrapper__videoAndImage'>
@@ -111,27 +96,48 @@ const HomeContainer = () => {
           }
           onClick={playVideo}
         />
-        <VideoContainer
+        {/* <VideoContainer
           ref={videoRef}
-          className='homeContainer__wrapper__popup__video'
+          className='video-js'
           autoPlay={!isPlaying ? true : false}
           controls={false}
           onClick={playVideo}
-        />
-        <VideoSeekSlider
-          max={videoSettings.maxTime}
-          currentTime={videoSettings.currentTime}
-          progress={1000}
-          onChange={(time) => {
-            setVideoSettings({
-              ...videoSettings,
-              currentTime: time,
-            });
-            console.log(time, 'timememememem77777777777777777777777');
+        /> */}
+        <ReactPlayer
+          ref={videoRef}
+          url={url}
+          controls={true}
+          playing={playing}
+          onProgress={(newState) => {
+            if (!seeking) {
+              setPlayed(newState.played);
+            }
           }}
-          offset={0}
-          secondsPrefix='00:00:'
-          minutesPrefix='00:'
+          onPlay={() => {
+            setPlaying(true);
+          }}
+          onPause={() => {
+            setPlaying(false);
+          }}
+        />
+        <input
+          style={{ width: '100%' }}
+          type='range'
+          min={0}
+          max={0.999999}
+          step='any'
+          value={played}
+          onMouseDown={() => {
+            setSeeking(true);
+          }}
+          onChange={({ target: { value } }) => {
+            setPlayed(parseFloat(value));
+          }}
+          onMouseUp={({ target: { value } }: any) => {
+            setSeeking(false);
+            videoRef?.current?.seekTo(parseFloat(value));
+            videoRef?.current?.seekTo(parseFloat(value));
+          }}
         />
       </Popup>
       <SliderContainer
