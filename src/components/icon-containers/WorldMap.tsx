@@ -18,7 +18,7 @@ const WorldMap = () => {
             transform='translate(92.407 18.509)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Estonia'
@@ -26,7 +26,7 @@ const WorldMap = () => {
             transform='translate(61.844 7.636)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Latvia'
@@ -34,7 +34,7 @@ const WorldMap = () => {
             transform='translate(61.064 8.078)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Lithuania'
@@ -42,7 +42,7 @@ const WorldMap = () => {
             transform='translate(61.085 8.601)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Belarus'
@@ -50,7 +50,7 @@ const WorldMap = () => {
             transform='translate(61.788 8.696)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Ukraine'
@@ -58,7 +58,7 @@ const WorldMap = () => {
             transform='translate(61.443 9.872)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Moldova'
@@ -66,7 +66,7 @@ const WorldMap = () => {
             transform='translate(62.865 11.121)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Syria'
@@ -74,7 +74,7 @@ const WorldMap = () => {
             transform='translate(65.686 14.644)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Turkey'
@@ -82,7 +82,7 @@ const WorldMap = () => {
             transform='translate(62.689 13.149)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Kuwait'
@@ -90,7 +90,7 @@ const WorldMap = () => {
             transform='translate(69.161 16.993)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Saudi-Arabia'
@@ -98,7 +98,7 @@ const WorldMap = () => {
             transform='translate(65.456 16.293)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='United-Arab-Emirates'
@@ -106,7 +106,7 @@ const WorldMap = () => {
             transform='translate(70.621 18.248)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Yemen'
@@ -114,7 +114,7 @@ const WorldMap = () => {
             transform='translate(67.98 20.445)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Slovenia'
@@ -122,7 +122,7 @@ const WorldMap = () => {
             transform='translate(58.671 11.617)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Croatia'
@@ -130,7 +130,7 @@ const WorldMap = () => {
             transform='translate(58.732 11.725)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Bosnia-and-Herzegovina'
@@ -138,7 +138,7 @@ const WorldMap = () => {
             transform='translate(59.432 12.137)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Montenegro'
@@ -146,7 +146,7 @@ const WorldMap = () => {
             transform='translate(60.284 12.679)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Macedonia'
@@ -154,7 +154,7 @@ const WorldMap = () => {
             transform='translate(60.945 13.054)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Serbia'
@@ -162,7 +162,7 @@ const WorldMap = () => {
             transform='translate(60.408 11.845)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Switzerland'
@@ -170,7 +170,7 @@ const WorldMap = () => {
             transform='translate(56.322 11.338)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Luxembourg'
@@ -178,7 +178,7 @@ const WorldMap = () => {
             transform='translate(56.257 10.587)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Tunisia'
@@ -186,7 +186,7 @@ const WorldMap = () => {
             transform='translate(56.83 14.652)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Western-Sahara'
@@ -194,7 +194,7 @@ const WorldMap = () => {
             transform='translate(49.056 17.73)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Senegal'
@@ -202,7 +202,7 @@ const WorldMap = () => {
             transform='translate(48.925 21.133)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Gambia'
@@ -210,7 +210,7 @@ const WorldMap = () => {
             transform='translate(49.131 22.093)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Sierra-Leone'
@@ -218,7 +218,7 @@ const WorldMap = () => {
             transform='translate(50.272 23.315)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Sudan'
@@ -226,7 +226,7 @@ const WorldMap = () => {
             transform='translate(61.338 19.514)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Uganda'
@@ -234,7 +234,7 @@ const WorldMap = () => {
             transform='translate(63.788 25.179)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Somalia'
@@ -242,7 +242,7 @@ const WorldMap = () => {
             transform='translate(67.422 22.676)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Rwanda'
@@ -250,7 +250,7 @@ const WorldMap = () => {
             transform='translate(63.565 26.818)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Burundi'
@@ -258,7 +258,7 @@ const WorldMap = () => {
             transform='translate(63.599 27.237)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Tanzania'
@@ -266,7 +266,7 @@ const WorldMap = () => {
             transform='translate(63.719 26.807)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Zambia'
@@ -274,7 +274,7 @@ const WorldMap = () => {
             transform='translate(61.382 29.077)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Zimbabwe'
@@ -282,7 +282,7 @@ const WorldMap = () => {
             transform='translate(62.453 31.401)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Lesotho'
@@ -290,7 +290,7 @@ const WorldMap = () => {
             transform='translate(63.01 35.544)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Swaziland'
@@ -298,7 +298,7 @@ const WorldMap = () => {
             transform='translate(64.193 34.634)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='South-Africa'
@@ -306,7 +306,7 @@ const WorldMap = () => {
             transform='translate(58.998 33.48)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Togo'
@@ -314,7 +314,7 @@ const WorldMap = () => {
             transform='translate(54.429 22.952)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Turkmenistan'
@@ -322,7 +322,7 @@ const WorldMap = () => {
             transform='translate(71.095 12.93)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Uzbekistan'
@@ -330,7 +330,7 @@ const WorldMap = () => {
             transform='translate(72.196 12.029)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Tajikistan'
@@ -338,7 +338,7 @@ const WorldMap = () => {
             transform='translate(75.813 13.471)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Kazakhstan'
@@ -346,7 +346,7 @@ const WorldMap = () => {
             transform='translate(69.193 8.912)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Kyrgyzstan'
@@ -354,7 +354,7 @@ const WorldMap = () => {
             transform='translate(76.392 12.784)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Armenia'
@@ -362,7 +362,7 @@ const WorldMap = () => {
             transform='translate(68.218 13.392)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Azerbaijan'
@@ -370,7 +370,7 @@ const WorldMap = () => {
             transform='translate(68.578 13.203)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Thailand'
@@ -378,7 +378,7 @@ const WorldMap = () => {
             transform='translate(85.278 19.985)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Vietnam'
@@ -386,7 +386,7 @@ const WorldMap = () => {
             transform='translate(86.712 19.087)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Sweden'
@@ -394,7 +394,7 @@ const WorldMap = () => {
             transform='translate(57.953 4.624)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='United-Kingdom'
@@ -402,7 +402,7 @@ const WorldMap = () => {
             transform='translate(51.871 7.926)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Spain'
@@ -410,7 +410,7 @@ const WorldMap = () => {
             transform='translate(51.511 12.611)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='USA'
@@ -418,7 +418,7 @@ const WorldMap = () => {
             transform='translate(0 3.871)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Afghanistan'
@@ -426,7 +426,7 @@ const WorldMap = () => {
             transform='translate(73.561 14.311)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Albania'
@@ -434,7 +434,7 @@ const WorldMap = () => {
             transform='translate(60.557 12.991)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Algeria'
@@ -442,7 +442,7 @@ const WorldMap = () => {
             transform='translate(51.708 14.725)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Angola'
@@ -450,7 +450,7 @@ const WorldMap = () => {
             transform='translate(58.171 27.887)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Argentina'
@@ -458,7 +458,7 @@ const WorldMap = () => {
             transform='translate(31.181 33.391)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Australia'
@@ -466,7 +466,7 @@ const WorldMap = () => {
             transform='translate(90.222 29.908)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Austria'
@@ -474,7 +474,7 @@ const WorldMap = () => {
             transform='translate(57.444 10.962)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Belgium'
@@ -482,7 +482,7 @@ const WorldMap = () => {
             transform='translate(55.24 10.17)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Belize'
@@ -490,7 +490,7 @@ const WorldMap = () => {
             transform='translate(26.194 20.597)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Benin'
@@ -498,7 +498,7 @@ const WorldMap = () => {
             transform='translate(54.71 22.554)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Bhutan'
@@ -506,7 +506,7 @@ const WorldMap = () => {
             transform='translate(82.533 17.505)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Bolivia'
@@ -514,7 +514,7 @@ const WorldMap = () => {
             transform='translate(32.417 29.555)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Botswana'
@@ -522,7 +522,7 @@ const WorldMap = () => {
             transform='translate(60.718 32.091)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Brazil'
@@ -530,7 +530,7 @@ const WorldMap = () => {
             transform='translate(31.06 24.827)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Brunei'
@@ -538,7 +538,7 @@ const WorldMap = () => {
             transform='translate(90.543 24.877)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Bulgaria'
@@ -546,7 +546,7 @@ const WorldMap = () => {
             transform='translate(61.501 12.451)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Burkina-Faso'
@@ -554,7 +554,7 @@ const WorldMap = () => {
             transform='translate(52.692 21.667)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Cambodia'
@@ -562,7 +562,7 @@ const WorldMap = () => {
             transform='translate(86.829 21.838)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Cameroon'
@@ -570,7 +570,7 @@ const WorldMap = () => {
             transform='translate(57.165 22.321)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Canada'
@@ -578,7 +578,7 @@ const WorldMap = () => {
             transform='translate(9.802 0.131)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Central-African-Republic'
@@ -586,7 +586,7 @@ const WorldMap = () => {
             transform='translate(59.005 22.972)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Chad'
@@ -594,7 +594,7 @@ const WorldMap = () => {
             transform='translate(58.706 19.054)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Chile'
@@ -602,7 +602,7 @@ const WorldMap = () => {
             transform='translate(30.561 32.031)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='China'
@@ -610,7 +610,7 @@ const WorldMap = () => {
             transform='translate(77.762 9.522)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Colombia'
@@ -618,7 +618,7 @@ const WorldMap = () => {
             transform='translate(29.432 22.521)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Congo-Brazzaville'
@@ -626,7 +626,7 @@ const WorldMap = () => {
             transform='translate(57.971 25.337)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Congo-Zaire'
@@ -634,7 +634,7 @@ const WorldMap = () => {
             transform='translate(58.31 24.778)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Costa-Rica'
@@ -642,7 +642,7 @@ const WorldMap = () => {
             transform='translate(27.281 22.917)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Cote-d-Ivoire'
@@ -650,7 +650,7 @@ const WorldMap = () => {
             transform='translate(51.742 23.093)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Cuba'
@@ -658,7 +658,7 @@ const WorldMap = () => {
             transform='translate(27.644 19.133)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Czech-Republic'
@@ -666,7 +666,7 @@ const WorldMap = () => {
             transform='translate(58.32 10.288)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Slovakia'
@@ -674,7 +674,7 @@ const WorldMap = () => {
             transform='translate(59.797 10.751)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Denmark-mainland'
@@ -682,7 +682,7 @@ const WorldMap = () => {
             transform='translate(56.996 8.178)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Greenland'
@@ -690,7 +690,7 @@ const WorldMap = () => {
             transform='translate(31.485)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Djibouti'
@@ -698,7 +698,7 @@ const WorldMap = () => {
             transform='translate(67.664 22.447)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Dominican-Republic'
@@ -706,7 +706,7 @@ const WorldMap = () => {
             transform='translate(31.69 20.15)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Ecuador'
@@ -714,7 +714,7 @@ const WorldMap = () => {
             transform='translate(28.827 26.017)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Egypt'
@@ -722,7 +722,7 @@ const WorldMap = () => {
             transform='translate(62.259 16.487)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='El-Salvador'
@@ -730,7 +730,7 @@ const WorldMap = () => {
             transform='translate(25.918 21.874)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Equatorial-Guinea'
@@ -738,7 +738,7 @@ const WorldMap = () => {
             transform='translate(57.085 25.3)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Eritrea'
@@ -746,7 +746,7 @@ const WorldMap = () => {
             transform='translate(65.977 20.751)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Ethiopia'
@@ -754,7 +754,7 @@ const WorldMap = () => {
             transform='translate(64.896 21.782)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Finland'
@@ -762,7 +762,7 @@ const WorldMap = () => {
             transform='translate(61.029 4.333)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='France'
@@ -770,7 +770,7 @@ const WorldMap = () => {
             transform='translate(52.928 10.284)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='French-Guiana'
@@ -778,7 +778,7 @@ const WorldMap = () => {
             transform='translate(37.237 24.654)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Gabon'
@@ -786,7 +786,7 @@ const WorldMap = () => {
             transform='translate(57.243 25.735)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Germany'
@@ -794,7 +794,7 @@ const WorldMap = () => {
             transform='translate(56.331 9.07)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Ghana'
@@ -802,7 +802,7 @@ const WorldMap = () => {
             transform='translate(53.435 22.934)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Greece'
@@ -810,7 +810,7 @@ const WorldMap = () => {
             transform='translate(60.81 13.269)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Guatemala'
@@ -818,7 +818,7 @@ const WorldMap = () => {
             transform='translate(25.258 20.809)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Guinea'
@@ -826,7 +826,7 @@ const WorldMap = () => {
             transform='translate(49.691 22.458)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Guinea-Bissau'
@@ -834,7 +834,7 @@ const WorldMap = () => {
             transform='translate(49.198 22.45)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Guyana'
@@ -842,7 +842,7 @@ const WorldMap = () => {
             transform='translate(35.056 23.797)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Haiti'
@@ -850,7 +850,7 @@ const WorldMap = () => {
             transform='translate(30.882 20.143)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Honduras'
@@ -858,7 +858,7 @@ const WorldMap = () => {
             transform='translate(26.173 21.4)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Hungary'
@@ -866,7 +866,7 @@ const WorldMap = () => {
             transform='translate(59.597 11.074)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Iceland'
@@ -874,7 +874,7 @@ const WorldMap = () => {
             transform='translate(46.777 5.422)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='India'
@@ -882,7 +882,7 @@ const WorldMap = () => {
             transform='translate(75.985 15.234)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Bangladesh'
@@ -890,7 +890,7 @@ const WorldMap = () => {
             transform='translate(82.303 18.123)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Pakistan'
@@ -898,7 +898,7 @@ const WorldMap = () => {
             transform='translate(73.69 14.754)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Indonesia'
@@ -906,7 +906,7 @@ const WorldMap = () => {
             transform='translate(84.568 24.691)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Iran'
@@ -914,7 +914,7 @@ const WorldMap = () => {
             transform='translate(68.387 13.884)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Iraq'
@@ -922,7 +922,7 @@ const WorldMap = () => {
             transform='translate(66.707 14.645)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Ireland'
@@ -930,7 +930,7 @@ const WorldMap = () => {
             transform='translate(51.126 8.973)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Israel'
@@ -938,7 +938,7 @@ const WorldMap = () => {
             transform='translate(65.249 15.978)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Italia'
@@ -946,7 +946,7 @@ const WorldMap = () => {
             transform='translate(56.513 11.557)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Jamaica'
@@ -954,7 +954,7 @@ const WorldMap = () => {
             transform='translate(29.662 20.599)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Japan'
@@ -962,7 +962,7 @@ const WorldMap = () => {
             transform='translate(95.39 12.074)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Jordan'
@@ -970,7 +970,7 @@ const WorldMap = () => {
             transform='translate(65.53 15.945)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Kenya'
@@ -978,7 +978,7 @@ const WorldMap = () => {
             transform='translate(64.981 25.008)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='North-Korea'
@@ -986,7 +986,7 @@ const WorldMap = () => {
             transform='translate(93.74 12.858)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='South-Korea'
@@ -994,7 +994,7 @@ const WorldMap = () => {
             transform='translate(94.322 14.271)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Laos'
@@ -1002,7 +1002,7 @@ const WorldMap = () => {
             transform='translate(86.105 19.322)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Lebanon'
@@ -1010,7 +1010,7 @@ const WorldMap = () => {
             transform='translate(65.521 15.534)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Liberia'
@@ -1018,7 +1018,7 @@ const WorldMap = () => {
             transform='translate(50.813 23.783)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Lybia'
@@ -1026,7 +1026,7 @@ const WorldMap = () => {
             transform='translate(57.41 15.974)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Madagascar'
@@ -1034,7 +1034,7 @@ const WorldMap = () => {
             transform='translate(68.144 30.347)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Malawi'
@@ -1042,7 +1042,7 @@ const WorldMap = () => {
             transform='translate(64.803 29.51)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Malaysia'
@@ -1050,7 +1050,7 @@ const WorldMap = () => {
             transform='translate(86.131 24.28)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Mali'
@@ -1058,7 +1058,7 @@ const WorldMap = () => {
             transform='translate(50.6 18.543)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Mauritania'
@@ -1066,7 +1066,7 @@ const WorldMap = () => {
             transform='translate(49.046 17.853)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Mexico'
@@ -1074,7 +1074,7 @@ const WorldMap = () => {
             transform='translate(17.369 16.124)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Mongolia'
@@ -1082,7 +1082,7 @@ const WorldMap = () => {
             transform='translate(82.26 9.985)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Morocco'
@@ -1090,7 +1090,7 @@ const WorldMap = () => {
             transform='translate(50.288 15.111)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Mozambique'
@@ -1098,7 +1098,7 @@ const WorldMap = () => {
             transform='translate(64.027 29.768)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Myanmar'
@@ -1106,7 +1106,7 @@ const WorldMap = () => {
             transform='translate(83.604 17.464)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Namibia'
@@ -1114,7 +1114,7 @@ const WorldMap = () => {
             transform='translate(58.166 31.835)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Nepal'
@@ -1122,7 +1122,7 @@ const WorldMap = () => {
             transform='translate(79.794 16.823)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Netherlands'
@@ -1130,7 +1130,7 @@ const WorldMap = () => {
             transform='translate(55.575 9.56)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='New-Zealand'
@@ -1138,7 +1138,7 @@ const WorldMap = () => {
             transform='translate(107.132 37.386)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Nicaragua'
@@ -1146,7 +1146,7 @@ const WorldMap = () => {
             transform='translate(26.695 21.706)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Niger'
@@ -1154,7 +1154,7 @@ const WorldMap = () => {
             transform='translate(54.504 19.03)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Nigeria'
@@ -1162,7 +1162,7 @@ const WorldMap = () => {
             transform='translate(55.307 22.09)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Norway'
@@ -1170,7 +1170,7 @@ const WorldMap = () => {
             transform='translate(56.024 0.934)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Oman'
@@ -1178,7 +1178,7 @@ const WorldMap = () => {
             transform='translate(70.837 18.17)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Panama'
@@ -1186,7 +1186,7 @@ const WorldMap = () => {
             transform='translate(28.195 23.408)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Papua-New-Guinea'
@@ -1194,7 +1194,7 @@ const WorldMap = () => {
             transform='translate(98.991 27.338)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Paraguay'
@@ -1202,7 +1202,7 @@ const WorldMap = () => {
             transform='translate(34.639 32.563)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Peru'
@@ -1210,7 +1210,7 @@ const WorldMap = () => {
             transform='translate(28.676 26.495)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Philippines'
@@ -1218,7 +1218,7 @@ const WorldMap = () => {
             transform='translate(91.519 20.584)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Poland'
@@ -1226,7 +1226,7 @@ const WorldMap = () => {
             transform='translate(58.894 9.137)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Portugal'
@@ -1234,7 +1234,7 @@ const WorldMap = () => {
             transform='translate(51.424 13.134)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Qatar'
@@ -1242,7 +1242,7 @@ const WorldMap = () => {
             transform='translate(70.537 18.208)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Romania'
@@ -1250,7 +1250,7 @@ const WorldMap = () => {
             transform='translate(60.871 11.178)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Russia'
@@ -1258,7 +1258,7 @@ const WorldMap = () => {
             transform='translate(63.384 2.131)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Georgia'
@@ -1266,7 +1266,7 @@ const WorldMap = () => {
             transform='translate(67.133 12.663)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Sri-Lanka'
@@ -1274,7 +1274,7 @@ const WorldMap = () => {
             transform='translate(79.662 23.404)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Suriname'
@@ -1282,7 +1282,7 @@ const WorldMap = () => {
             transform='translate(36.094 24.555)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Trinidad-and-Tobago'
@@ -1290,7 +1290,7 @@ const WorldMap = () => {
             transform='translate(34.821 23.028)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Uruguay'
@@ -1298,7 +1298,7 @@ const WorldMap = () => {
             transform='translate(35.957 36.033)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Puerto-Rico'
@@ -1306,7 +1306,7 @@ const WorldMap = () => {
             transform='translate(33.176 20.586)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
           <path
             id='Venezuela'
@@ -1314,7 +1314,7 @@ const WorldMap = () => {
             transform='translate(31.241 22.585)'
             fill='none'
             stroke='#4e4e4e'
-            stroke-width='1'
+            strokeWidth='1'
           />
         </g>
         <g
@@ -1337,7 +1337,7 @@ const WorldMap = () => {
             transform='translate(1732 6746)'
             fill='none'
             stroke='#35ccc0'
-            stroke-width='0.5'
+            strokeWidth='0.5'
           >
             <circle cx='7.5' cy='7.5' r='7.5' stroke='none' />
             <circle cx='7.5' cy='7.5' r='7.25' fill='none' />
@@ -1348,7 +1348,7 @@ const WorldMap = () => {
             transform='translate(1729 6743)'
             fill='none'
             stroke='#35ccc0'
-            stroke-width='0.5'
+            strokeWidth='0.5'
           >
             <circle cx='10.5' cy='10.5' r='10.5' stroke='none' />
             <circle cx='10.5' cy='10.5' r='10.25' fill='none' />

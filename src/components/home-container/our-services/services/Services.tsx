@@ -1,12 +1,11 @@
-import React from 'react';
-import './services.scss';
 import { SwiperSlide } from 'swiper/react';
 import { servicesData } from '../fakeDataServices';
 import SlideContentTab from './../slideContentTab/SlideContentTab';
 import RightArrowIcon from '../../../icon-containers/RightArrowIcon';
 import BlueLine from '../../../reusable-components/blueLine/BlueLine';
-import ServicesSwiper from '../../../reusable-components/swiper/ServicesSwiper';
+import ReusableSwiper from '../../../reusable-components/swiper/ReusableSwiper';
 import { servicesType } from '../../../model';
+import './services.scss';
 
 const Services = () => {
   return (
@@ -27,7 +26,32 @@ const Services = () => {
         <BlueLine />
       </div>
 
-      <ServicesSwiper>
+      <ReusableSwiper
+        spaceBetween={5}
+        centeredSlides={true}
+        navigation={true}
+        pagination={false}
+        className='mySwiper'
+        breakpoints={{
+          1680: {
+            width: 1000,
+            slidesPerView: 3,
+          },
+          768: {
+            width: 630,
+            slidesPerView: 2,
+          },
+
+          361: {
+            width: 310,
+            slidesPerView: 1,
+          },
+          320: {
+            width: 270,
+            slidesPerView: 1,
+          },
+        }}
+      >
         {servicesData.map((item: servicesType) => {
           return (
             <SwiperSlide key={item.id}>
@@ -35,7 +59,7 @@ const Services = () => {
             </SwiperSlide>
           );
         })}
-      </ServicesSwiper>
+      </ReusableSwiper>
     </div>
   );
 };
