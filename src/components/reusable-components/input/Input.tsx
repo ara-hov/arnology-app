@@ -1,3 +1,4 @@
+import Fade from 'react-reveal/Fade';
 import { InputProps } from '../models';
 import './input.scss';
 
@@ -25,7 +26,9 @@ const Input = ({
         onBlur={onBlur}
       />
       {errorsMessage && (
-        <div className='input__container--error'>{errorsMessage}</div>
+        <Fade top>
+          <div className='input__container--error'>{errorsMessage}</div>
+        </Fade>
       )}
     </div>
   );

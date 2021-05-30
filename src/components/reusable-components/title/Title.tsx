@@ -1,9 +1,9 @@
 import BlueLine from '../blueLine/BlueLine';
 import { TitleProps } from '../models';
 
-const Title = ({ title, className }: TitleProps) => {
+const Title = ({ title, className, titleClassName }: TitleProps) => {
   return (
-    <div>
+    <div className={titleClassName}>
       <h1 className={className}>{title}</h1>
       <BlueLine />
     </div>

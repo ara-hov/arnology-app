@@ -4,6 +4,10 @@
 .works__container {
   width: 50%;
   padding: 16rem 0 0 24rem;
+  &--titleBlock {
+    display: grid;
+    place-items: center;
+  }
 
   .slider-single-content {
     box-shadow: none !important;

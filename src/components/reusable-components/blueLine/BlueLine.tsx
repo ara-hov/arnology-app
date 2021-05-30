@@ -1,9 +1,7 @@
 import './BlueLine.scss';
 
-const BlueLine = ({ width = '5rem', className = '' }) => {
-  return (
-    <div className={`blue-line${className}`} style={{ width: width }}></div>
-  );
+const BlueLine = () => {
+  return <div className='blue__line'></div>;
 };
 
 export default BlueLine;
