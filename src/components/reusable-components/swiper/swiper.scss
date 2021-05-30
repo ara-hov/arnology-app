@@ -54,24 +54,30 @@
 
     .swiper-button-next {
       top: 13.3rem;
-      left: 37rem;
+      left: 38rem;
     }
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 767px) {
   .mySwiper {
     margin-top: 10rem;
   }
   .swiper-container {
     .swiper-button-prev {
-      top: 12.4rem;
-      left: 18rem;
+      top: 10rem;
+      left: 17rem;
+      &:after {
+        font-size: 2rem;
+      }
     }
 
     .swiper-button-next {
-      top: 12.4rem;
-      left: 21rem;
+      top: 10rem;
+      left: 20.4rem;
+      &:after {
+        font-size: 2rem;
+      }
     }
   }
 }

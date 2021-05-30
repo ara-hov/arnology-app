@@ -25,3 +25,22 @@ export type servicesType = {
   title: string;
   desc: string;
 };
+
+export type testimonialsType = {
+  id?: number | string;
+  info?: string;
+  name?: string;
+  profession?: string;
+};
+
+export type worksType = {
+  id?: string;
+  title: string;
+  info: string;
+  img: string;
+};
+
+export interface SelectType {
+  value: string;
+  label: any | ReactNode;
+}

@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { BrowserRouter } from 'react-router-dom';
+import 'react-dropdown/style.css';
 import 'swiper/swiper-bundle.css';
 import 'react-phone-input-2/lib/style.css';
 

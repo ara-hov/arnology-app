@@ -8,7 +8,10 @@ const Estimate = () => {
     <div className='estimate__container'>
       <div className='estimate__container__text'>
         <h1 className='estimate__container__text--title'>GET AN ESTIMATE</h1>
-        <BlueLine />
+        <div className='estimate__container__text--blueLine'>
+          {' '}
+          <BlueLine />
+        </div>
         <p className='estimate__container__text--subTitle'>
           Interested in discussing a project? Let’s build something great.
         </p>

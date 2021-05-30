@@ -11,6 +11,8 @@
     margin-top: 3rem;
     gap: 13rem;
     &__info {
+      z-index: 1;
+
       &--title {
         font-size: 1.6rem;
         color: #fafafa;
