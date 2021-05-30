@@ -1,19 +1,19 @@
-import { FC, useEffect, useState } from "react";
-import "./worksContainer.scss";
-import WorksHeader from "./works-header/worksHeader";
-import CardItems from "./items-wrapper/cardItems";
+import { FC, useEffect, useState } from 'react';
+import WorksHeader from './works-header/worksHeader';
+import CardItems from './items-wrapper/cardItems';
+import './worksContainer.scss';
 
 const WorksContainer: FC = () => {
-  const [sortLableName, sortByLabelName] = useState("all");
+  const [sortLabelName, sortByLabelName] = useState('all');
 
   useEffect(() => {
-    sortByLabelName(sortLableName);
-  }, []);
+    sortByLabelName(sortLabelName);
+  }, [sortLabelName]);
 
   return (
-    <div className="worksContainer__Wrapper">
+    <div className='worksContainer__Wrapper'>
       <WorksHeader sortByLabelName={sortByLabelName} />
-      <CardItems sortLableName={sortLableName} />
+      <CardItems sortLabelName={sortLabelName} />
     </div>
   );
 };
