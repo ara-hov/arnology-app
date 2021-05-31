@@ -47,7 +47,7 @@ const HomeContainer = () => {
   };
 
   const url =
-    'https://strvothers.s3.amazonaws.com/web-videos/website-home-background-1080p.mp4';
+    'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
 
   return (
     <div className='homeContainer__wrapper'>
