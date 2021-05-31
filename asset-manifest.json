@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/arnology-app/static/css/main.33a5ffe9.chunk.css",
+    "main.js": "/arnology-app/static/js/main.61b1e6d6.chunk.js",
+    "main.js.map": "/arnology-app/static/js/main.61b1e6d6.chunk.js.map",
+    "runtime-main.js": "/arnology-app/static/js/runtime-main.0e70cdb1.js",
+    "runtime-main.js.map": "/arnology-app/static/js/runtime-main.0e70cdb1.js.map",
+    "static/css/2.8e97d5b6.chunk.css": "/arnology-app/static/css/2.8e97d5b6.chunk.css",
+    "static/js/2.f3f255f1.chunk.js": "/arnology-app/static/js/2.f3f255f1.chunk.js",
+    "static/js/2.f3f255f1.chunk.js.map": "/arnology-app/static/js/2.f3f255f1.chunk.js.map",
+    "static/js/3.8864abac.chunk.js": "/arnology-app/static/js/3.8864abac.chunk.js",
+    "static/js/3.8864abac.chunk.js.map": "/arnology-app/static/js/3.8864abac.chunk.js.map",
+    "index.html": "/arnology-app/index.html",
+    "static/css/2.8e97d5b6.chunk.css.map": "/arnology-app/static/css/2.8e97d5b6.chunk.css.map",
+    "static/css/main.33a5ffe9.chunk.css.map": "/arnology-app/static/css/main.33a5ffe9.chunk.css.map",
+    "static/js/2.f3f255f1.chunk.js.LICENSE.txt": "/arnology-app/static/js/2.f3f255f1.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/arnology-app/static/media/trump_gothic_east_bold.02995660.ttf",
+    "static/media/bg_image.d3f90c2b.jpg": "/arnology-app/static/media/bg_image.d3f90c2b.jpg",
+    "static/media/ourWorks.scss": "/arnology-app/static/media/our_works_bg.db2120b6.png",
+    "static/media/thirdimg.c118fb38.png": "/arnology-app/static/media/thirdimg.c118fb38.png",
+    "static/media/works_card_1.b2ab15cc.jpg": "/arnology-app/static/media/works_card_1.b2ab15cc.jpg",
+    "static/media/works_card_2.9b4183d5.jpg": "/arnology-app/static/media/works_card_2.9b4183d5.jpg",
+    "static/media/works_card_4.82d3f995.jpg": "/arnology-app/static/media/works_card_4.82d3f995.jpg",
+    "static/media/works_card_5.7ce1a0a5.jpg": "/arnology-app/static/media/works_card_5.7ce1a0a5.jpg",
+    "static/media/works_card_7.579175a7.jpg": "/arnology-app/static/media/works_card_7.579175a7.jpg",
+    "static/media/works_card_8.bd145fa2.png": "/arnology-app/static/media/works_card_8.bd145fa2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0e70cdb1.js",
+    "static/css/2.8e97d5b6.chunk.css",
+    "static/js/2.f3f255f1.chunk.js",
+    "static/css/main.33a5ffe9.chunk.css",
+    "static/js/main.61b1e6d6.chunk.js"
+  ]
+}
