@@ -95,40 +95,41 @@ const HomeContainer = () => {
           }
           onClick={handleVideoPlay}
         />
-        <ReactPlayer
-          ref={videoRef}
-          className='homeContainer__wrapper__popup__videoPopup'
-          url={url}
-          controls={false}
-          playing={isPlaying}
-          onClick={handleVideoPlay}
-          onProgress={(newState) => {
-            if (!seeking) {
-              setPlayed(newState.played);
-            }
-          }}
-        />
-        <div className='homeContainer__wrapper__popup__rangeWrapper'>
-          <div className='homeContainer__wrapper__popup__rangeWrapper--block'></div>
-          <input
-            type='range'
-            className='homeContainer__wrapper__popup__rangeWrapper--range'
-            min={0}
-            max={0.999999}
-            step='any'
-            value={played}
-            onMouseDown={() => {
-              setSeeking(true);
-            }}
-            onChange={({ target: { value } }) => {
-              setPlayed(parseFloat(value));
-            }}
-            onMouseUp={({ target: { value } }: any) => {
-              setSeeking(false);
-              videoRef?.current?.seekTo(parseFloat(value));
-              videoRef?.current?.seekTo(parseFloat(value));
+        <div className='homeContainer__wrapper__popup__videoPopupWrapper'>
+          <ReactPlayer
+            ref={videoRef}
+            className='homeContainer__wrapper__popup__videoPopupWrapper__videoPopup'
+            url={url}
+            controls={false}
+            playing={isPlaying}
+            onClick={handleVideoPlay}
+            onProgress={(newState) => {
+              if (!seeking) {
+                setPlayed(newState.played);
+              }
             }}
           />
+          <div className='homeContainer__wrapper__popup__videoPopupWrapper__rangeWrapper'>
+            <input
+              type='range'
+              className='homeContainer__wrapper__popup__videoPopupWrapper__rangeWrapper--range'
+              min={0}
+              max={0.999999}
+              step='any'
+              value={played}
+              onMouseDown={() => {
+                setSeeking(true);
+              }}
+              onChange={({ target: { value } }) => {
+                setPlayed(parseFloat(value));
+              }}
+              onMouseUp={({ target: { value } }: any) => {
+                setSeeking(false);
+                videoRef?.current?.seekTo(parseFloat(value));
+                videoRef?.current?.seekTo(parseFloat(value));
+              }}
+            />
+          </div>
         </div>
       </Popup>
       <SliderContainer

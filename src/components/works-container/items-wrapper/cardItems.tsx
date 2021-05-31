@@ -16,7 +16,7 @@ const CardItems: FC<CardItemsProps> = ({ sortLabelName }) => {
 
   return (
     <div className='cardItems__wrapper'>
-      <Fade bottom big cascade duration={1500} delay={500} distance='30rem'>
+      <Fade bottom big cascade duration={1500} delay={500} distance='300rem'>
         {CardImages &&
           CardImages.filter((item) =>
             !isSorted
