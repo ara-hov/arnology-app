@@ -17,7 +17,7 @@ const VideoContainer = forwardRef<HTMLVideoElement, VideoContainerProps>(
         onClick={onClick}
       >
         <source
-          src='https://strvothers.s3.amazonaws.com/web-videos/website-home-background-1080p.mp4'
+          // src='https://strvothers.s3.amazonaws.com/web-videos/website-home-background-1080p.mp4'
           type='video/mp4'
         />
       </video>
