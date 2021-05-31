@@ -1,9 +1,10 @@
-import './works.scss';
+import "./works.scss";
+import WorksContainer from "../../components/works-container/worksContainer";
 
 const Works = () => {
   return (
     <div>
-      <h1>Works</h1>
+      <WorksContainer />
     </div>
   );
 };

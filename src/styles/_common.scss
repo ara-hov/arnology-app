@@ -6,3 +6,21 @@
   height: $height;
   width: $width;
 }
+@mixin textStyle($color, $fontSize, $lineHeigth, $letterSpacing) {
+  font-family: TrumpGothicEast;
+  font-size: $fontSize;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $lineHeigth;
+  letter-spacing: $letterSpacing;
+  text-align: left;
+  color: $color;
+  text-transform: uppercase;
+}
+@mixin displayCenterGrid($column) {
+  display: grid;
+  grid-template-columns: $column;
+  justify-content: center;
+  align-items: center;
+}

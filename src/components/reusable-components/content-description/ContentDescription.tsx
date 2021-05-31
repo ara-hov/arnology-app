@@ -18,7 +18,7 @@ const ContentDescription: FC<ContentDescriptionProps> = ({
         {secondLine ? (
           <h1 className='contentDescription__title'>{secondLine} </h1>
         ) : null}
-        <BlueLine width='17rem' />
+        <BlueLine />
         <p className='contentDescription__info'>{info}</p>
         <Button
           className={

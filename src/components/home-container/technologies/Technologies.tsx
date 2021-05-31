@@ -1,4 +1,4 @@
-import BlueLine from '../../reusable-components/blueLine/BlueLine';
+import Title from '../../reusable-components/title/Title';
 import './technologies.scss';
 
 const Technologies = () => {
@@ -15,11 +15,10 @@ const Technologies = () => {
           <div className={`inner__square`}></div>
         </div>
       </div>
-
-      <p className='techno__wrapper__title'>
-        Web development technologies we use
-      </p>
-      <BlueLine width='6rem' />
+      <Title
+        title='Web development technologies we use'
+        className='techno__wrapper__title'
+      />
     </div>
   );
 };

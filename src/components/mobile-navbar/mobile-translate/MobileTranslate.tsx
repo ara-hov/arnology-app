@@ -2,8 +2,6 @@ import './mobileTranslate.scss';
 import { useState, FC, useEffect } from 'react';
 
 const MobileTranslate: FC<any> = ({ selectedLang }) => {
-  console.log(selectedLang);
-
   const LangArray = ['EN', 'RU', 'FR', 'HY'];
   const [lang, setLang] = useState('');
 

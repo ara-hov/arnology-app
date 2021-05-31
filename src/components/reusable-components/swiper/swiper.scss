@@ -1,14 +1,19 @@
 @import '../../../styles/variables';
 .mySwiper {
-  margin-left: 4px !important;
+  margin-left: -6.6rem !important;
   margin-top: 14rem;
 }
 
 .swiper-container {
   position: unset !important;
+
+  .swiper-pagination {
+    z-index: 4;
+  }
   .swiper-button-prev {
     top: 31.7rem;
     left: 74rem;
+    z-index: 4;
     &:after {
       color: $secondaryWhite;
       font-size: 3rem;
@@ -18,6 +23,7 @@
   .swiper-button-next {
     top: 31.7rem;
     left: 78rem;
+    z-index: 4;
     &:after {
       color: $secondaryWhite;
       font-size: 3rem;
@@ -28,6 +34,7 @@
 @media screen and (max-width: 1679px) {
   .mySwiper {
     margin-top: 12rem;
+    margin-left: 0.4rem !important;
   }
   .swiper-container {
     .swiper-button-prev {

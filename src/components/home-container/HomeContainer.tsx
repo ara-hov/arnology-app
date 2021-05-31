@@ -9,7 +9,6 @@ import CloseIcon from '../icon-containers/CloseIcon';
 import SliderContainer from '../reusable-components/slider/Slider';
 import HomeContainerTab from './home-container-tab/HomeContainerTab';
 import { technologies } from './fakeData';
-import BlueLine from '../reusable-components/blueLine/BlueLine';
 import RightArrowIcon from '../icon-containers/RightArrowIcon';
 import LeftArrowIcon from '../icon-containers/LeftArrowIcon';
 import { technologiesType } from '../model';
@@ -18,40 +17,38 @@ import OurServices from './our-services/OurServices';
 import Testimonials from './testimonials/Testimonials';
 import OurWorks from './our-works/OurWorks';
 import ReactPlayer from 'react-player';
+import Title from '../reusable-components/title/Title';
 import './homeContainer.scss';
 
 const HomeContainer = () => {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
+  const [played, setPlayed] = useState(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [seeking, setSeeking] = useState(false);
 
   const videoRef = useRef<any>();
 
-  const [currentVideoTime, setCurrentVideoTime] = useState<any>(null);
-
-  console.log(videoRef, 'videoRef');
-
   const openVideoPopup = () => {
     setIsPopupOpen(!isPopupOpen);
+    setIsPlaying(!isPlaying);
   };
 
   const closePopup = () => {
     setIsPopupOpen(false);
   };
 
-  const playVideo = () => {
+  const handleVideoPlay = () => {
     setIsPlaying(!isPlaying);
     if (isPlaying) {
-      videoRef?.current?.play();
+      videoRef.current.props.onPlay();
     } else {
-      videoRef?.current?.pause();
+      videoRef.current.props.onPause();
     }
   };
 
-  const [played, setPlayed] = useState(0);
-  const [playing, setPlaying] = useState<boolean>(false);
-  const [seeking, setSeeking] = useState(false);
   const url =
     'https://strvothers.s3.amazonaws.com/web-videos/website-home-background-1080p.mp4';
+
   return (
     <div className='homeContainer__wrapper'>
       <div className='homeContainer__wrapper__videoAndImage'>
@@ -92,55 +89,48 @@ const HomeContainer = () => {
         />
         <PlayIcon
           className={
-            isPlaying
+            !isPlaying
               ? 'homeContainer__wrapper__popup--videoPlay'
               : 'homeContainer__wrapper__popup--videoPause'
           }
-          onClick={playVideo}
+          onClick={handleVideoPlay}
         />
-        {/* <VideoContainer
-          ref={videoRef}
-          className='video-js'
-          autoPlay={!isPlaying ? true : false}
-          controls={false}
-          onClick={playVideo}
-        /> */}
-        <ReactPlayer
-          ref={videoRef}
-          url={url}
-          controls={true}
-          playing={playing}
-          onProgress={(newState) => {
-            if (!seeking) {
-              setPlayed(newState.played);
-            }
-          }}
-          onPlay={() => {
-            setPlaying(true);
-          }}
-          onPause={() => {
-            setPlaying(false);
-          }}
-        />
-        <input
-          style={{ width: '100%' }}
-          type='range'
-          min={0}
-          max={0.999999}
-          step='any'
-          value={played}
-          onMouseDown={() => {
-            setSeeking(true);
-          }}
-          onChange={({ target: { value } }) => {
-            setPlayed(parseFloat(value));
-          }}
-          onMouseUp={({ target: { value } }: any) => {
-            setSeeking(false);
-            videoRef?.current?.seekTo(parseFloat(value));
-            videoRef?.current?.seekTo(parseFloat(value));
-          }}
-        />
+        <div className='homeContainer__wrapper__popup__videoPopupWrapper'>
+          <ReactPlayer
+            ref={videoRef}
+            className='homeContainer__wrapper__popup__videoPopupWrapper__videoPopup'
+            url={url}
+            controls={false}
+            playing={isPlaying}
+            onClick={handleVideoPlay}
+            onProgress={(newState) => {
+              if (!seeking) {
+                setPlayed(newState.played);
+              }
+            }}
+          />
+          <div className='homeContainer__wrapper__popup__videoPopupWrapper__rangeWrapper'>
+            <input
+              type='range'
+              className='homeContainer__wrapper__popup__videoPopupWrapper__rangeWrapper--range'
+              min={0}
+              max={0.999999}
+              step='any'
+              value={played}
+              onMouseDown={() => {
+                setSeeking(true);
+              }}
+              onChange={({ target: { value } }) => {
+                setPlayed(parseFloat(value));
+              }}
+              onMouseUp={({ target: { value } }: any) => {
+                setSeeking(false);
+                videoRef?.current?.seekTo(parseFloat(value));
+                videoRef?.current?.seekTo(parseFloat(value));
+              }}
+            />
+          </div>
+        </div>
       </Popup>
       <SliderContainer
         settings={{
@@ -158,8 +148,10 @@ const HomeContainer = () => {
         {technologies.map((desc: technologiesType) => {
           return (
             <div className='homeContainer__wrapper__slide' key={desc.id}>
-              <h2>{desc.title}</h2>
-              <BlueLine />
+              <Title
+                title={desc.title}
+                className='homeContainer__wrapper__slide--title'
+              />
               <HomeContainerTab desc={[...desc.desc]} />
             </div>
           );

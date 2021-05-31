@@ -1,18 +1,20 @@
 import { SwiperSlide } from 'swiper/react';
 import { servicesData } from '../fakeDataServices';
+import { servicesType } from '../../../model';
 import SlideContentTab from './../slideContentTab/SlideContentTab';
 import RightArrowIcon from '../../../icon-containers/RightArrowIcon';
-import BlueLine from '../../../reusable-components/blueLine/BlueLine';
 import ReusableSwiper from '../../../reusable-components/swiper/ReusableSwiper';
-import { servicesType } from '../../../model';
+import Title from '../../../reusable-components/title/Title';
 import './services.scss';
 
 const Services = () => {
   return (
     <div className='services__container'>
       <div className='services__container__head'>
-        <h1 className='services__container__head--title'>OUR SERVICES</h1>
-
+        <Title
+          title='our services'
+          className='services__container__head--title'
+        />
         <div className='services__container__head__textBlock'>
           <span className='services__container__head__textBlock--text'>
             Read More
@@ -22,10 +24,6 @@ const Services = () => {
           </span>
         </div>
       </div>
-      <div className='services__container__head__blueLineBlock'>
-        <BlueLine />
-      </div>
-
       <ReusableSwiper
         spaceBetween={5}
         centeredSlides={true}

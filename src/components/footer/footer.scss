@@ -51,8 +51,9 @@
 
 @media screen and (max-width: 1024px) {
   .footer__wrapper {
+    place-content: center;
     &__content {
-      justify-content: center;
+      place-content: center;
     }
   }
 }
@@ -60,8 +61,14 @@
 @media screen and (max-width: 800px) {
   .footer__wrapper {
     display: grid;
-    justify-items: center;
     padding: 5rem;
+    text-align: center;
+    place-items: center;
+    svg {
+      width: 65%;
+      margin: auto;
+    }
+
     &__content {
       grid-auto-flow: unset;
       gap: 4rem;
