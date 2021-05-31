@@ -46,8 +46,8 @@ const HomeContainer = () => {
     }
   };
 
-  // const url =
-  //   'https://strvothers.s3.amazonaws.com/web-videos/website-home-background-1080p.mp4';
+  const url =
+    'https://strvothers.s3.amazonaws.com/web-videos/website-home-background-1080p.mp4';
 
   return (
     <div className='homeContainer__wrapper'>
@@ -99,7 +99,7 @@ const HomeContainer = () => {
           <ReactPlayer
             ref={videoRef}
             className='homeContainer__wrapper__popup__videoPopupWrapper__videoPopup'
-            // url={url}
+            url={url}
             controls={false}
             playing={isPlaying}
             onClick={handleVideoPlay}
