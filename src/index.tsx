@@ -7,7 +7,6 @@ import { BrowserRouter } from 'react-router-dom';
 import 'react-dropdown/style.css';
 import 'swiper/swiper-bundle.css';
 import 'react-phone-input-2/lib/style.css';
-import 'rc-checkbox/assets/index.css';
 import './index.scss';
 
 ReactDOM.render(
