@@ -233,12 +233,11 @@
 
 @media screen and (max-width: 1024px) {
   .homeContainer__wrapper {
-    .left__arrow__icon {
-      top: 36% !important;
-      right: 21% !important;
+    & .left__arrow__icon {
+      display: none;
     }
-    .right__arrow__icon {
-      top: 36% !important;
+    & .right__arrow__icon {
+      display: none;
     }
 
     &__videoAndImage {

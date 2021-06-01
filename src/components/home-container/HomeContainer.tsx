@@ -1,9 +1,8 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import ContentDescription from '../reusable-components/content-description/ContentDescription';
 import VideoContainer from '../reusable-components/video-container/VideoContainer';
 import PlayIcon from '../icon-containers/PlayIcon';
 import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
 import ImageContainer from './image-container/ImageContainer';
 import Popup from '../reusable-components/popup/Popup';
 import CloseIcon from '../icon-containers/CloseIcon';
@@ -20,24 +19,19 @@ import OurWorks from './our-works/OurWorks';
 import ReactPlayer from 'react-player';
 import Title from '../reusable-components/title/Title';
 import './homeContainer.scss';
-
 const HomeContainer = () => {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
   const [played, setPlayed] = useState(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [seeking, setSeeking] = useState(false);
-
   const videoRef = useRef<any>();
-
   const openVideoPopup = () => {
     setIsPopupOpen(!isPopupOpen);
     setIsPlaying(!isPlaying);
   };
-
   const closePopup = () => {
     setIsPopupOpen(false);
   };
-
   const handleVideoPlay = () => {
     setIsPlaying(!isPlaying);
     if (isPlaying) {
@@ -46,10 +40,13 @@ const HomeContainer = () => {
       videoRef.current.props.onPause();
     }
   };
-
   const url =
     'https://strvothers.s3.amazonaws.com/web-videos/website-home-background-1080p.mp4';
-
+  useEffect(() => {
+    isPopupOpen
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'unset');
+  });
   return (
     <div className='homeContainer__wrapper'>
       <div className='homeContainer__wrapper__videoAndImage'>
@@ -96,44 +93,45 @@ const HomeContainer = () => {
           }
           onClick={handleVideoPlay}
         />
-        <Zoom when={isPopupOpen} delay={3000} duration={3100}>
-          <div className='homeContainer__wrapper__popup__videoPopupWrapper'>
-            <ReactPlayer
-              ref={videoRef}
-              className='homeContainer__wrapper__popup__videoPopupWrapper__videoPopup'
-              url={url}
-              controls={false}
-              playing={isPlaying}
-              onClick={handleVideoPlay}
-              onProgress={(newState) => {
-                if (!seeking) {
-                  setPlayed(newState.played);
-                }
+        <div className='homeContainer__wrapper__popup__videoPopupWrapper'>
+          <ReactPlayer
+            ref={videoRef}
+            className='homeContainer__wrapper__popup__videoPopupWrapper__videoPopup'
+            url={url}
+            controls={false}
+            playing={isPlaying}
+            onClick={handleVideoPlay}
+            onProgress={(newState) => {
+              if (!seeking) {
+                setPlayed(newState.played);
+              }
+            }}
+          />
+          <div className='homeContainer__wrapper__popup__videoPopupWrapper__rangeWrapper'>
+            <input
+              type='range'
+              className='homeContainer__wrapper__popup__videoPopupWrapper__rangeWrapper--range'
+              min={0}
+              max={0.999999}
+              step='any'
+              value={played}
+              onMouseDown={() => {
+                setSeeking(true);
+              }}
+              onMouseDownCapture={() => {
+                setSeeking(true);
+              }}
+              onChange={({ target: { value } }) => {
+                setPlayed(parseFloat(value));
+              }}
+              onMouseUp={({ target: { value } }: any) => {
+                setSeeking(false);
+                videoRef?.current?.seekTo(parseFloat(value));
+                videoRef?.current?.seekTo(parseFloat(value));
               }}
             />
-            <div className='homeContainer__wrapper__popup__videoPopupWrapper__rangeWrapper'>
-              <input
-                type='range'
-                className='homeContainer__wrapper__popup__videoPopupWrapper__rangeWrapper--range'
-                min={0}
-                max={0.999999}
-                step='any'
-                value={played}
-                onMouseDown={() => {
-                  setSeeking(true);
-                }}
-                onChange={({ target: { value } }) => {
-                  setPlayed(parseFloat(value));
-                }}
-                onMouseUp={({ target: { value } }: any) => {
-                  setSeeking(false);
-                  videoRef?.current?.seekTo(parseFloat(value));
-                  videoRef?.current?.seekTo(parseFloat(value));
-                }}
-              />
-            </div>
           </div>
-        </Zoom>
+        </div>
       </Popup>
       <SliderContainer
         settings={{
@@ -167,5 +165,4 @@ const HomeContainer = () => {
     </div>
   );
 };
-
 export default HomeContainer;

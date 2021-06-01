@@ -58,13 +58,15 @@
     display: none;
   }
   &__mobile__menu {
+    overflow-y: auto;
+    padding-bottom: 10%;
     &--logo {
       display: none;
     }
-    &__hide{
+    &__hide {
       display: none;
     }
-  }  
+  }
 
   &__button {
     cursor: pointer;

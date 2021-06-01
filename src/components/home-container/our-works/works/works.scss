@@ -3,7 +3,11 @@
 
 .works__container {
   width: 50%;
+<<<<<<< HEAD
+  padding: 16rem 0 0 14.2vw;
+=======
   padding: 16rem 0 0 27rem;
+>>>>>>> 26d1eb54ec1ea5be0659512d626fe4c7b6d0ef11
   &--titleBlock {
     display: grid;
   }
@@ -70,8 +74,17 @@
 
 @media screen and (max-width: 1550px) {
   .works__container {
+<<<<<<< HEAD
+    padding: 8rem 0 0 14.2vw;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .works__container {
+=======
+>>>>>>> 26d1eb54ec1ea5be0659512d626fe4c7b6d0ef11
     width: 46%;
-    padding: 8rem 0 0 12rem;
+    padding: 8rem 0 0 14.2vw;
 
     &--title {
       font-size: 7.7rem;
@@ -96,7 +109,7 @@
 
 @media screen and (max-width: 1024px) {
   .works__container {
-    padding: 10rem 0 0 10rem;
+    padding: 10rem 0 0 14.2vw;
 
     &--title {
       font-size: 6rem;
@@ -132,7 +145,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .works__container {
     width: 100%;
     text-align: center;

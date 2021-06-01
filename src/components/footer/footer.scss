@@ -58,14 +58,22 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .footer__wrapper {
     display: grid;
     padding: 5rem;
     text-align: center;
+<<<<<<< HEAD
+    > svg {
+      width: 160px;
+      margin: auto;
+    }
+    svg {
+=======
     place-items: center;
     svg {
       width: 65%;
+>>>>>>> 26d1eb54ec1ea5be0659512d626fe4c7b6d0ef11
       margin: auto;
     }
 
