@@ -9,7 +9,6 @@ import CloseIcon from '../icon-containers/CloseIcon';
 import SliderContainer from '../reusable-components/slider/Slider';
 import HomeContainerTab from './home-container-tab/HomeContainerTab';
 import { technologies } from './fakeData';
-import BlueLine from '../reusable-components/blueLine/BlueLine';
 import RightArrowIcon from '../icon-containers/RightArrowIcon';
 import LeftArrowIcon from '../icon-containers/LeftArrowIcon';
 import { technologiesType } from '../model';
@@ -18,6 +17,7 @@ import OurServices from './our-services/OurServices';
 import Testimonials from './testimonials/Testimonials';
 import OurWorks from './our-works/OurWorks';
 import ReactPlayer from 'react-player';
+import Title from '../reusable-components/title/Title';
 import './homeContainer.scss';
 
 const HomeContainer = () => {
@@ -147,8 +147,10 @@ const HomeContainer = () => {
         {technologies.map((desc: technologiesType) => {
           return (
             <div className='homeContainer__wrapper__slide' key={desc.id}>
-              <h2>{desc.title}</h2>
-              <BlueLine />
+              <Title
+                title={desc.title}
+                className='homeContainer__wrapper__slide--title'
+              />
               <HomeContainerTab desc={[...desc.desc]} />
             </div>
           );

@@ -53,7 +53,6 @@ const Header: FC = () => {
           value={lang}
           onChange={(option) => handleLangChange(option)}
         />
-        ;
       </div>
       <div
         className='header__container__mobile'

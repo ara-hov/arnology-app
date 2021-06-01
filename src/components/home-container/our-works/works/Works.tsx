@@ -1,9 +1,9 @@
-import Button from '../../../reusable-components/button/Button';
-import Title from '../../../reusable-components/title/Title';
-import './works.scss';
 import { Carousel } from '3d-react-carousal';
 import { worksData } from '../worksFakeData';
+import Button from '../../../reusable-components/button/Button';
+import Title from '../../../reusable-components/title/Title';
 import WorksContentTab from '../worksContentTab/WorksContentTab';
+import './works.scss';
 
 const Works = () => {
   let slides: any = [];
@@ -21,7 +21,11 @@ const Works = () => {
 
   return (
     <div className='works__container'>
-      <Title title='OUR WORKS' className='works__container--title' />
+      <Title
+        title='OUR WORKS'
+        className='works__container--title'
+        titleClassName='works__container--titleBlock'
+      />
       <p className='works__container--text'>
         There is nothing more important for us than our client's success. That's
         why we build our applications with great attention to detail and a
@@ -29,7 +33,7 @@ const Works = () => {
         work speak for ourselves!
       </p>
       <div className='works__container__slider'>
-        <Carousel slides={slides} autoplay={true} />
+        <Carousel slides={slides} autoplay={true} interval={2000} />
       </div>
       <Button buttonText='SEE PORTFOLIO' className='works__container--button' />
     </div>

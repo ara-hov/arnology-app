@@ -7,11 +7,12 @@
   &__head {
     display: flex;
     justify-content: space-between;
-    padding: 27rem 37rem 0rem 37rem;
+    padding: 27rem 37rem 0rem 27rem;
     &--title {
       font-size: 8rem;
       color: $secondaryWhite;
       letter-spacing: 1.74px;
+      text-transform: uppercase;
     }
     &__textBlock {
       display: grid;
@@ -55,9 +56,6 @@
       &--title {
         font-size: 3.6rem;
       }
-      &__textBlock {
-        // display: none;
-      }
       &__blueLineBlock {
         margin-left: 16rem;
       }
@@ -70,11 +68,10 @@
     &__head {
       padding: 8rem 1.6rem 0rem 1.6rem;
       &--title {
-        font-size: 3rem;
+        font-size: 2.4rem;
       }
 
       &__textBlock {
-        // display: grid;
         gap: 1rem;
       }
       &__blueLineBlock {

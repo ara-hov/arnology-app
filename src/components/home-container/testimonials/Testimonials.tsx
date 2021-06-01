@@ -9,7 +9,11 @@ import ReusableSwiper from '../../reusable-components/swiper/ReusableSwiper';
 const Testimonials = () => {
   return (
     <div className='testimonials__container'>
-      <Title title='Testimonials' className='testimonials__container--title' />
+      <Title
+        title='Testimonials'
+        className='testimonials__container--title'
+        titleClassName='testimonials__container--titleBlock'
+      />
       <ReusableSwiper
         pagination={{
           clickable: true,
