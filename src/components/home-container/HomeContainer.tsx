@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import ContentDescription from '../reusable-components/content-description/ContentDescription';
 import VideoContainer from '../reusable-components/video-container/VideoContainer';
 import PlayIcon from '../icon-containers/PlayIcon';
@@ -48,6 +48,12 @@ const HomeContainer = () => {
 
   const url =
     'https://strvothers.s3.amazonaws.com/web-videos/website-home-background-1080p.mp4';
+
+  useEffect(() => {
+    isPopupOpen
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'unset');
+  });
 
   return (
     <div className='homeContainer__wrapper'>
@@ -118,6 +124,9 @@ const HomeContainer = () => {
               step='any'
               value={played}
               onMouseDown={() => {
+                setSeeking(true);
+              }}
+              onMouseDownCapture={() => {
                 setSeeking(true);
               }}
               onChange={({ target: { value } }) => {

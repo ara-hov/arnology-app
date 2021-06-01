@@ -7,7 +7,7 @@
   &__head {
     display: flex;
     justify-content: space-between;
-    padding: 27rem 37rem 0rem 27rem;
+    padding: 27rem 14.2vw 0rem 14.2vw;
     &--title {
       font-size: 8rem;
       color: $secondaryWhite;
@@ -17,32 +17,18 @@
     &__textBlock {
       display: grid;
       grid-auto-flow: column;
-      place-content: center;
       gap: 3rem;
+      margin-top: 3.8rem;
 
       &--text {
         font-size: 1.6rem;
         color: $secondaryBorderGrey;
       }
-    }
-    &__blueLineBlock {
-      margin-left: 37rem;
-    }
-  }
-}
 
-@media screen and (max-width: 1679px) {
-  .services__container {
-    &__head {
-      padding: 17rem 16rem 0rem 16rem;
-
-      &__textBlock {
-        &--text {
-          font-size: 1.4rem;
+      &--icon {
+        .right__arrow__icon {
+          display: block !important;
         }
-      }
-      &__blueLineBlock {
-        margin-left: 16rem;
       }
     }
   }
@@ -51,10 +37,13 @@
 @media screen and (max-width: 1024px) {
   .services__container {
     &__head {
-      padding: 11rem 16rem 0rem 16rem;
+      padding: 11rem 14.2vw 0rem 14.2vw;
 
       &--title {
-        font-size: 3.6rem;
+        font-size: 6rem;
+      }
+      &__textBlock {
+        margin-top: 2.8rem;
       }
       &__blueLineBlock {
         margin-left: 16rem;
@@ -66,39 +55,21 @@
 @media screen and (max-width: 767px) {
   .services__container {
     &__head {
-      padding: 8rem 1.6rem 0rem 1.6rem;
-      &--title {
-        font-size: 2.4rem;
-      }
-
-      &__textBlock {
-        gap: 1rem;
-      }
-      &__blueLineBlock {
-        margin-left: 2rem;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .services__container {
-    &__head {
-      padding: 4rem 1.6rem 0rem 1.6rem;
-
+      padding: 4rem 14.2vw 0rem 1.6rem;
       &--title {
         font-size: 2.4rem;
         letter-spacing: 0.48px;
       }
 
       &__textBlock {
+        gap: 1rem;
+        margin-top: 0.8rem;
         &--text {
           font-size: 1.3rem;
         }
       }
       &__blueLineBlock {
-        margin-left: 2.5rem;
-        margin-top: -1.4rem;
+        margin-left: 2rem;
       }
     }
   }
