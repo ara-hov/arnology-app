@@ -4,8 +4,8 @@ import Input from '../../reusable-components/input/Input';
 import PhoneInput from 'react-phone-input-2';
 import TextArea from '../../reusable-components/textarea/TextArea';
 import Button from '../../reusable-components/button/Button';
-import './contactUs.scss';
 import { Formik } from 'formik';
+import './contactUs.scss';
 
 const ContactUs = () => {
   const [phone, setPhone] = useState<string>('');
@@ -127,15 +127,18 @@ const ContactUs = () => {
                   value={values.message}
                 />
               </div>
-              <div className='contactUs__container__form__checkbox'>
-                <Input
+              <label className='contactUs__container__form__checkbox'>
+                <input
                   type='checkbox'
                   name='subscribe'
                   onChange={handleChange}
                   checked={values.subscribe}
                 />
-                <span>Yes, I want to subscribe</span>
-              </div>
+                <span className='checkmark'></span>
+                <span className='contactUs__container__form__checkbox--text'>
+                  Yes, I want to subscribe
+                </span>
+              </label>
               <Button
                 className='contactUs__container__form__submitButton'
                 buttonText='SEND'
