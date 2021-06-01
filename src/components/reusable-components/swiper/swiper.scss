@@ -12,7 +12,7 @@
   }
   .swiper-button-prev {
     top: 31.7rem;
-    left: 74rem;
+    left: 70rem;
     z-index: 4;
     &:after {
       color: $secondaryWhite;
@@ -22,7 +22,7 @@
 
   .swiper-button-next {
     top: 31.7rem;
-    left: 78rem;
+    left: 76rem;
     z-index: 4;
     &:after {
       color: $secondaryWhite;
@@ -31,20 +31,14 @@
   }
 }
 
-@media screen and (max-width: 1679px) {
-  .mySwiper {
-    margin-top: 12rem;
-    margin-left: 0.4rem !important;
-  }
+@media screen and (max-width: 1360px) {
   .swiper-container {
     .swiper-button-prev {
-      top: 21.7rem;
-      left: 54rem;
+      left: 55rem;
     }
 
     .swiper-button-next {
-      top: 21.7rem;
-      left: 58rem;
+      left: 60rem;
     }
   }
 }
@@ -55,47 +49,25 @@
   }
   .swiper-container {
     .swiper-button-prev {
-      top: 13.3rem;
-      left: 34rem;
+      top: 14.6rem;
+      left: 42rem;
     }
 
     .swiper-button-next {
-      top: 13.3rem;
-      left: 38rem;
+      top: 14.6rem;
+      left: 46rem;
     }
   }
 }
 
 @media screen and (max-width: 767px) {
   .mySwiper {
-    margin-top: 10rem;
+    margin-top: 3.3rem;
+    margin-left: 1.5rem !important;
   }
   .swiper-container {
     .swiper-button-prev {
-      top: 10rem;
-      left: 17rem;
-      &:after {
-        font-size: 2rem;
-      }
-    }
-
-    .swiper-button-next {
-      top: 10rem;
-      left: 20.4rem;
-      &:after {
-        font-size: 2rem;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .mySwiper {
-    margin-top: 3rem;
-  }
-  .swiper-container {
-    .swiper-button-prev {
-      top: 5.5rem;
+      top: 5.6rem;
       left: 12rem;
       &:after {
         font-size: 1.4rem;
@@ -103,8 +75,8 @@
     }
 
     .swiper-button-next {
-      top: 5.5rem;
-      left: 14rem;
+      top: 5.6rem;
+      left: 14.5rem;
       &:after {
         font-size: 1.4rem;
       }

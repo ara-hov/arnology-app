@@ -205,10 +205,11 @@
     &--videoPlay {
       position: absolute;
       z-index: 2;
-      top: 43%;
-      left: 47%;
+      top: 50%;
+      left: 50%;
       cursor: pointer;
       z-index: 99;
+      transform: translate(-50%, -50%);
       @extend %PlayButtonProps;
     }
     &--videoPause {
@@ -233,12 +234,11 @@
 
 @media screen and (max-width: 1024px) {
   .homeContainer__wrapper {
-    .left__arrow__icon {
-      top: 36% !important;
-      right: 21% !important;
+    & .left__arrow__icon {
+      display: none;
     }
-    .right__arrow__icon {
-      top: 36% !important;
+    & .right__arrow__icon {
+      display: none;
     }
 
     &__videoAndImage {
@@ -249,16 +249,14 @@
         display: block;
       }
     }
-    &__popup {
-      &--videoPlay {
-        left: 45%;
-      }
-    }
   }
 }
 
 @media screen and (max-width: 700px) {
   .homeContainer__wrapper {
+    .contentDescription__button {
+      margin-top: 2.4rem;
+    }
     .center {
       .slick-list {
         padding: 7.5rem 0 10rem 15.3% !important;
@@ -284,21 +282,21 @@
       right: 12% !important;
     }
 
-    button {
-      margin-top: 2.4rem;
-    }
-
     &__desc {
       &__play {
         display: grid;
         justify-content: center;
-        top: 74%;
+        top: 71%;
         left: 0;
         right: 0;
+        svg {
+          width: 8rem;
+        }
       }
     }
     &__video__info {
       text-align: center;
+      padding: 2rem 4rem;
       &--text {
         font-size: 1.2rem;
       }
@@ -306,12 +304,11 @@
     &__popup {
       &--videoPlay {
         width: 15vw;
-        left: 44%;
+        transform: translate(-50%, -60%);
       }
       &__videoPopup {
         .play {
           width: 6rem;
-          transform: translate(-30%, -60%);
         }
       }
     }

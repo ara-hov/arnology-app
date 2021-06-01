@@ -3,7 +3,7 @@
 
 .works__container {
   width: 50%;
-  padding: 16rem 0 0 27rem;
+  padding: 16rem 0 0 14.2vw;
   &--titleBlock {
     display: grid;
   }
@@ -70,8 +70,14 @@
 
 @media screen and (max-width: 1550px) {
   .works__container {
+    padding: 8rem 0 0 14.2vw;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .works__container {
     width: 46%;
-    padding: 8rem 0 0 12rem;
+    padding: 8rem 0 0 14.2vw;
 
     &--title {
       font-size: 7.7rem;
@@ -96,7 +102,7 @@
 
 @media screen and (max-width: 1024px) {
   .works__container {
-    padding: 10rem 0 0 10rem;
+    padding: 10rem 0 0 14.2vw;
 
     &--title {
       font-size: 6rem;
@@ -132,7 +138,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .works__container {
     width: 100%;
     text-align: center;
