@@ -108,7 +108,7 @@
 
 @media screen and (max-width: 1024px) {
   .contactUs__container {
-    margin-top: 7rem;
+    margin-top: 6rem;
     width: unset;
     &__form {
       &__name {
@@ -125,7 +125,7 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 767px) {
   .contactUs__container {
     margin-top: 4.8rem;
     &--title {
