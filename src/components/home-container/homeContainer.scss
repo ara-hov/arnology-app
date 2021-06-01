@@ -258,6 +258,9 @@
 
 @media screen and (max-width: 700px) {
   .homeContainer__wrapper {
+    .contentDescription__button {
+      margin-top: 2.4rem;
+    }
     .center {
       .slick-list {
         padding: 7.5rem 0 10rem 15.3% !important;
@@ -283,21 +286,21 @@
       right: 12% !important;
     }
 
-    button {
-      margin-top: 2.4rem;
-    }
-
     &__desc {
       &__play {
         display: grid;
         justify-content: center;
-        top: 74%;
+        top: 71%;
         left: 0;
         right: 0;
+        svg {
+          width: 8rem;
+        }
       }
     }
     &__video__info {
       text-align: center;
+      padding: 2rem 4rem;
       &--text {
         font-size: 1.2rem;
       }
