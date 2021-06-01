@@ -115,16 +115,21 @@ const HomeContainer = () => {
               max={0.999999}
               step='any'
               value={played}
-              onMouseDown={() => {
+              onTouchStart={() => {
                 setSeeking(true);
               }}
-              onMouseDownCapture={() => {
+              onMouseDown={() => {
                 setSeeking(true);
               }}
               onChange={({ target: { value } }) => {
                 setPlayed(parseFloat(value));
               }}
-              onMouseUp={({ target: { value } }: any) => {
+              onTouchEnd={({ target: { value } }: any) => {
+                setSeeking(false);
+                videoRef?.current?.seekTo(parseFloat(value));
+                videoRef?.current?.seekTo(parseFloat(value));
+              }}
+              onMouseLeave={({ target: { value } }: any) => {
                 setSeeking(false);
                 videoRef?.current?.seekTo(parseFloat(value));
                 videoRef?.current?.seekTo(parseFloat(value));
