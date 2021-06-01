@@ -121,40 +121,48 @@
     }
   }
   &__popup {
-    &__videoPopup {
-      width: 75% !important;
-      height: 100% !important;
-      margin: 5% auto;
-      position: inherit;
-      z-index: 2;
-      video {
-        width: 100%;
-        height: 100%;
-      }
-
-      .play {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 11rem;
-        cursor: pointer;
-        transform: translate(-20%, -50%);
-        @extend %PlayButtonProps;
-      }
-      .hide {
-        display: none;
-      }
-    }
-    &__rangeWrapper {
-      width: 100%;
-      display: grid;
-      &--block {
-      }
-      &--range {
+    position: relative;
+    height: inherit;
+    &__videoPopupWrapper {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      transform: translate(0, -50%);
+      &__videoPopup {
         width: 75% !important;
-        height: 8px;
+        height: unset !important;
+        max-width: 1600px;
+        margin: 0 auto 20px;
+        position: static;
+        z-index: 2;
+        video {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+
+        .play {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 11rem;
+          cursor: pointer;
+          transform: translate(-20%, -50%);
+          @extend %PlayButtonProps;
+        }
+        .hide {
+          display: none;
+        }
+      }
+      &__rangeWrapper {
+        width: 75% !important;
+        max-width: 1600px;
         margin: 0 auto;
-        cursor: pointer;
+        &--range {
+          width: 100%;
+          cursor: pointer;
+        }
       }
     }
 
