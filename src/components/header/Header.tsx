@@ -1,28 +1,30 @@
-import { FC, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Twirl as Hamburger } from 'hamburger-react';
-import Dropdown from 'react-dropdown';
-import Logo from '../../components/icon-containers/Logo';
-import Navbar from '../home-container/navbar/Navbar';
-import Button from '../reusable-components/button/Button';
-import MobileNavbar from '../mobile-navbar/MobileNavbar';
-import { SelectType } from '../model';
-import './header.scss';
+import { FC, useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Twirl as Hamburger } from "hamburger-react";
+import Dropdown from "react-dropdown";
+import Logo from "../../components/icon-containers/Logo";
+import Navbar from "../home-container/navbar/Navbar";
+import Button from "../reusable-components/button/Button";
+import MobileNavbar from "../mobile-navbar/MobileNavbar";
+import { SelectType } from "../model";
+import "./header.scss";
 
 const Header: FC = () => {
-  const [color, setColor] = useState('#ffffff');
+  const { pathname } = useLocation();
+
+  const [color, setColor] = useState("");
   const [isOpen, setOpen] = useState(false);
-  const [lang, setLang] = useState({ value: 'en', label: 'EN' });
+  const [lang, setLang] = useState({ value: "en", label: "EN" });
   const [langOptions, setLangOptions] = useState([
-    { value: 'ru', label: 'RU' },
-    { value: 'hy', label: 'HY' },
-    { value: 'fr', label: 'FR' },
+    { value: "ru", label: "RU" },
+    { value: "hy", label: "HY" },
+    { value: "fr", label: "FR" },
   ]);
 
   useEffect(() => {
     isOpen
-      ? (document.body.style.overflow = 'hidden')
-      : (document.body.style.overflow = 'unset');
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "unset");
   }, [isOpen]);
 
   const shoWMenu = () => {
@@ -37,39 +39,58 @@ const Header: FC = () => {
     setLang(option);
   };
 
+  useEffect(() => {
+    if (pathname === "/") {
+      setColor("#ffffff");
+    } else {
+      setColor("#1f2935");
+    }
+  }, [pathname]);
+
   return (
-    <div className='header__container'>
-      <Link to='/'>
-        <Logo className='logo' />
+    <div className="header__container">
+      <Link to="/">
+        <Logo className="logo" />
       </Link>
-      <div className='header__container__last'>
+      <div className="header__container__last">
         <Navbar />
         <Button
-          className='header__container__button'
-          buttonText='Get an estimate'
+          className={
+            pathname === "/"
+              ? "header__container__button--dark"
+              : "header__container__button--light"
+          }
+          buttonText="Get an estimate"
         ></Button>
         <Dropdown
+          className={
+            pathname === "/" ? "Dropdown__root__dark" : "Dropdown__root__light"
+          }
           options={langOptions}
           value={lang}
           onChange={(option) => handleLangChange(option)}
         />
       </div>
       <div
-        className='header__container__mobile'
+        className="header__container__mobile"
         onClick={shoWMenu}
-        onMouseOver={() => setColor('#03c4c7')}
-        onMouseLeave={() => setColor('#ffffff')}
+        onMouseOver={() => {
+          setColor("#03c4c7");
+        }}
+        onMouseLeave={() =>
+          setColor(`${pathname === "/" ? "#ffffff" : "#1f2935"}`)
+        }
       >
         <Hamburger color={color} size={30} toggled={isOpen} toggle={setOpen} />
       </div>
       <div
         className={
           isOpen
-            ? 'header__container__mobile__menu'
-            : 'header__container__mobile__menu__hide'
+            ? "header__container__mobile__menu"
+            : "header__container__mobile__menu__hide"
         }
       >
-        <Logo className='header__container__mobile__menu--logo' />
+        <Logo className="header__container__mobile__menu--logo" />
         <MobileNavbar shoWMenu={shoWMenu} selectedLang={lang.label} />
       </div>
     </div>
