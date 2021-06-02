@@ -19,19 +19,24 @@ import OurWorks from './our-works/OurWorks';
 import ReactPlayer from 'react-player';
 import Title from '../reusable-components/title/Title';
 import './homeContainer.scss';
+
 const HomeContainer = () => {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
   const [played, setPlayed] = useState(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [seeking, setSeeking] = useState(false);
+
   const videoRef = useRef<any>();
+
   const openVideoPopup = () => {
     setIsPopupOpen(!isPopupOpen);
     setIsPlaying(!isPlaying);
   };
+
   const closePopup = () => {
     setIsPopupOpen(false);
   };
+
   const handleVideoPlay = () => {
     setIsPlaying(!isPlaying);
     if (isPlaying) {
@@ -40,8 +45,10 @@ const HomeContainer = () => {
       videoRef.current.props.onPause();
     }
   };
+
   const url =
     'https://strvothers.s3.amazonaws.com/web-videos/website-home-background-1080p.mp4';
+
   useEffect(() => {
     isPopupOpen
       ? (document.body.style.overflow = 'hidden')
