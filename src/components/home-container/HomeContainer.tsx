@@ -35,6 +35,7 @@ const HomeContainer = () => {
 
   const closePopup = () => {
     setIsPopupOpen(false);
+    setIsPlaying(false);
   };
 
   const handleVideoPlay = () => {
@@ -106,6 +107,7 @@ const HomeContainer = () => {
             className='homeContainer__wrapper__popup__videoPopupWrapper__videoPopup'
             url={url}
             controls={false}
+            autoplay={true}
             playing={isPlaying}
             onClick={handleVideoPlay}
             onProgress={(newState) => {

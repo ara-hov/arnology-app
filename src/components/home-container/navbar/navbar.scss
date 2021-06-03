@@ -3,7 +3,7 @@
 .navbar {
   display: grid;
   grid-auto-flow: column;
-  gap: 3.5rem;
+  gap: 3rem;
 
   &__selected {
     color: $primaryLightGreenBlue !important;
