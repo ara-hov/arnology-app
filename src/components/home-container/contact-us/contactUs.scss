@@ -64,14 +64,21 @@
       align-items: center;
       justify-content: flex-start;
       gap: 1.6rem;
-      .input__container {
-        input:checked {
-          filter: invert(56%) sepia(93%) saturate(1912%) hue-rotate(139deg)
-            brightness(98%) contrast(98%);
-          -webkit-filter: invert(56%) sepia(93%) saturate(1912%)
-            hue-rotate(139deg) brightness(98%) contrast(98%);
+
+      input[type='checkbox'] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+
+      input[type='checkbox']:checked {
+        background-color: blue;
+        &:after {
+          color: black;
+          background-color: black;
         }
       }
+     
       input {
         width: 24px !important;
         height: 24px !important;
