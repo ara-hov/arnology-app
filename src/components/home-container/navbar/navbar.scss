@@ -1,16 +1,19 @@
 @import '../../../styles/variables.scss';
 
-.navbar {
+
+%navbarGrid{
   display: grid;
   grid-auto-flow: column;
   gap: 3rem;
 
   &__selected {
+  gap: 3.5rem;
+}
+%navbarSelected{
     color: $primaryLightGreenBlue !important;
     -webkit-text-fill-color: unset !important;
-  }
-
-  a {
+}
+%navbarA{
     font-size: 16px;
     line-height: 1.63;
     color: $secondaryWhite;
@@ -28,8 +31,40 @@
     background-position: 100%;
     transition: background-position 375ms ease;
     text-decoration: none; // text decorations are clipped in WebKit browsers
-    &:hover {
+}
+
+.navbar__light{
+  @extend %navbarGrid;
+  &__selected{
+   @extend %navbarSelected;
+  }
+  & a{
+    @extend %navbarA;
+    color: #1f2935;   
+    -webkit-text-fill-color:#1f2935;
+    &:hover{
       background-position: 0 100%;
     }
+  }
+}
+
+.navbar__dark {
+  @extend %navbarGrid; 
+  &__selected{
+    @extend %navbarSelected;
+  }
+  & a{
+    @extend %navbarA;
+    &:hover{
+      background-position: 0 100%;
+    }
+  }
+}
+@media screen and (max-width: 1024px){
+  .navbar__dark{   
+    grid-auto-flow: unset;
+  }
+  .navbar__light{   
+    grid-auto-flow: unset;
   }
 }
