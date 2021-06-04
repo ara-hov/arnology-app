@@ -204,12 +204,13 @@
 
     &--videoPlay {
       position: absolute;
-      z-index: 2;
-      top: 50%;
-      left: 50%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
       cursor: pointer;
       z-index: 99;
-      transform: translate(-50%, -50%);
       @extend %PlayButtonProps;
     }
     &--videoPause {
@@ -304,9 +305,10 @@
     &__popup {
       &--videoPlay {
         width: 15vw;
-        transform: translate(-50%, -60%);
+        height: 7%;
       }
       &__videoPopup {
+        margin: 0 auto 1rem;
         .play {
           width: 6rem;
         }
