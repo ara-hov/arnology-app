@@ -1,20 +1,21 @@
 @import '../../../styles/variables';
 @import '../../../styles/common';
 
-.cardItems__wrapper {
-  @include displayCenterGrid(auto auto auto);
+.cardItems__wrapper {  
+  @include displayCenterGrid(33% 33% 33%);
   grid-gap: 2.4rem;
-  padding: 5.5rem 11rem 0;
-
+  padding: 7.5rem 19.1% 0;   
   &__card {
     position: relative;
     object-fit: contain;
     border-radius: 0.5rem;
     cursor: pointer;
     transition: box-shadow 0.3s, transform 0.3s, opacity 0.3s;
+    animation-name: cardFade;
+    animation-duration: 1s;
     &:hover {
-      box-shadow: 0 20px 30px 0 rgba(255, 255, 255, 1%);
-      transform: translateY(-8px);
+      box-shadow: 0 2rem 3rem 0 rgba(255, 255, 255, 1%);
+      transform: translateY(-0.8rem);
     }
     &--imageTitle {
       position: absolute;
@@ -27,8 +28,7 @@
       line-height: 0.4rem;
       letter-spacing: 0.096rem;
       color: $secondaryWhite;
-      text-transform: uppercase;
-      z-index: 1;
+      text-transform: uppercase;     
     }
     &--imageFooter {
       position: absolute;
@@ -54,18 +54,11 @@
     }
   }
 }
-@keyframes example {
-  from {
-    top: 0;
-  }
-  to {
-    top: -15px;
-  }
-}
+
 @media screen and (max-width: 1024px) {
   .cardItems__wrapper {
     grid-gap: 1.8rem;
-    padding: 4.5rem 6rem;
+    padding: 4.5rem 12.5% 6.9rem;
     &__card--imageTitle {
       left: 2.5rem;
     }
@@ -80,8 +73,8 @@
 
 @media screen and (max-width: 767px) {
   .cardItems__wrapper {
-    @include displayCenterGrid(auto);
-    padding: 4.5rem 3rem 0;
+    @include displayCenterGrid(100%);
+    padding: 4rem 3rem 0;
     width: 100%;
     &__card--imageTitle {
       font-size: 2.1vw;
@@ -97,4 +90,8 @@
       width: 100%;
     }
   }
+}
+@keyframes cardFade{
+  from {top:5rem;opacity: 0;}
+  to {top:0;opacity: 1;}
 }

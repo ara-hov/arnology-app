@@ -59,35 +59,62 @@
     }
 
     &__checkbox {
-      display: grid;
-      grid-auto-flow: column;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 1.6rem;
-
-      input[type='checkbox'] {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+      display: block;
+      position: relative;
+      padding-left: 3.5rem;
+      margin-bottom: 1.2rem;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      &--text {
+        font-size: 1.6rem;
+        line-height: 1.81;
+        letter-spacing: 0.22px;
       }
 
-      input[type='checkbox']:checked {
-        background-color: blue;
-        &:after {
-          color: black;
-          background-color: black;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .checkmark {
+          background-color: $primaryLightGreenBlue;
+        }
+
+        &:checked ~ .checkmark:after {
+          display: block;
         }
       }
-     
-      input {
-        width: 24px !important;
-        height: 24px !important;
-        outline: 0.5px solid $lighterGrey !important;
-      }
-      span {
-        font-size: 1.6rem;
-        line-height: 2.81;
-        letter-spacing: 0.22px;
+
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2.5rem;
+        width: 2.5rem;
+        border: 1px solid #b6b9bc;
+        background-color: $secondaryWhite;
+        border-radius: 0.5rem;
+        &:after {
+          content: '';
+          position: absolute;
+          display: none;
+        }
+        &:after {
+          left: 8px;
+          top: 1px;
+          width: 6px;
+          height: 14px;
+          border: solid white;
+          border-width: 0 2px 3px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
       }
     }
     &__textarea {
@@ -118,6 +145,11 @@
     margin-top: 6rem;
     width: unset;
     &__form {
+      &__checkbox {
+        &--text {
+          font-size: 1.4rem;
+        }
+      }
       &__name {
         grid-auto-flow: unset;
       }

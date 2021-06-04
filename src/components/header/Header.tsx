@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Twirl as Hamburger } from 'hamburger-react';
 import Dropdown from 'react-dropdown';
 import Logo from '../../components/icon-containers/Logo';
@@ -10,7 +10,9 @@ import { SelectType } from '../model';
 import './header.scss';
 
 const Header: FC = () => {
-  const [color, setColor] = useState('#ffffff');
+  const { pathname } = useLocation();
+
+  const [color, setColor] = useState('');
   const [isOpen, setOpen] = useState(false);
   const [lang, setLang] = useState({ value: 'en', label: 'EN' });
   const [langOptions, setLangOptions] = useState([
@@ -37,6 +39,14 @@ const Header: FC = () => {
     setLang(option);
   };
 
+  useEffect(() => {
+    if (pathname === '/' || pathname === '/contact') {
+      setColor('#ffffff');
+    } else {
+      setColor('#1f2935');
+    }
+  }, [pathname]);
+
   return (
     <div className='header__container'>
       <Link to='/'>
@@ -45,10 +55,17 @@ const Header: FC = () => {
       <div className='header__container__last'>
         <Navbar />
         <Button
-          className='header__container__button'
+          className={
+            pathname === '/'
+              ? 'header__container__button--dark'
+              : 'header__container__button--light'
+          }
           buttonText='Get an estimate'
         ></Button>
         <Dropdown
+          className={
+            pathname === '/' ? 'Dropdown__root__dark' : 'Dropdown__root__light'
+          }
           options={langOptions}
           value={lang}
           onChange={(option) => handleLangChange(option)}
@@ -57,8 +74,12 @@ const Header: FC = () => {
       <div
         className='header__container__mobile'
         onClick={shoWMenu}
-        onMouseOver={() => setColor('#03c4c7')}
-        onMouseLeave={() => setColor('#ffffff')}
+        onMouseOver={() => {
+          setColor('#03c4c7');
+        }}
+        onMouseLeave={() =>
+          setColor(`${pathname === '/' ? '#ffffff' : '#1f2935'}`)
+        }
       >
         <Hamburger color={color} size={30} toggled={isOpen} toggle={setOpen} />
       </div>

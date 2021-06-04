@@ -205,10 +205,11 @@
     &--videoPlay {
       position: absolute;
       z-index: 2;
-      top: 43%;
-      left: 47%;
+      top: 50%;
+      left: 50%;
       cursor: pointer;
       z-index: 99;
+      transform: translate(-50%, -50%);
       @extend %PlayButtonProps;
     }
     &--videoPause {
@@ -246,11 +247,6 @@
       }
       .imageContainer {
         display: block;
-      }
-    }
-    &__popup {
-      &--videoPlay {
-        left: 45%;
       }
     }
   }
@@ -308,12 +304,11 @@
     &__popup {
       &--videoPlay {
         width: 15vw;
-        left: 44%;
+        transform: translate(-50%, -60%);
       }
       &__videoPopup {
         .play {
           width: 6rem;
-          transform: translate(-30%, -60%);
         }
       }
     }

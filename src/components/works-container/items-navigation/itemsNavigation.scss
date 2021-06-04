@@ -17,8 +17,8 @@
       @include textStyle($primaryDarkGrey, 1.8rem, 1.44, 0.025rem);
       border: none;
       background: transparent;
-      padding: 2rem 0;
-      color: $primiaryRedRibon;
+      padding: 2rem 0;     
+      color:$primaryLightGreenBlueActive;
     }
     &--button:hover::before,
     &--buttonActive:hover::before {
@@ -29,8 +29,8 @@
     &--buttonActive::before {
       content: attr(data-text);
       position: absolute;
-      transform: translate3d(0, 17px, 0);
-      color: $primiaryRedRibon;
+      transform: translate3d(0, 17px, 0);     
+      color:$primaryLightGreenBlueActive;
       opacity: 0;
       transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
     }
@@ -62,7 +62,7 @@
     transform: translate(0%, -50%);
   }
   &__close--first:hover {
-    color: $primiaryRedRibon;
+    color: $primaryLightGreenBlueActive;
   }
 }
 
@@ -80,7 +80,8 @@
     }
     &__navigation__wrapper {
       @include displayCenterGrid(auto);
-      justify-content: space-between;
+      justify-content: space-between; 
+      text-align: left;     
 
       &__item--button {
         color: azure;

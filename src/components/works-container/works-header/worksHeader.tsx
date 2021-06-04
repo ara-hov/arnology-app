@@ -32,7 +32,7 @@ const WorksHeader: FC<HeaderProps> = ({ sortByLabelName }) => {
       <div
         className='worksContainer__header__mobile'
         onClick={shoWMenu}
-        onMouseOver={() => setColor('#ef0d33')}
+        onMouseOver={() => setColor('#03989b')}
         onMouseLeave={() => setColor('#1f2937')}
       >
         <h1 className='worksContainer__header__mobile__showLabel'>show:</h1>

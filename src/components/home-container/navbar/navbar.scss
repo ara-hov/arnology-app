@@ -1,35 +1,66 @@
 @import '../../../styles/variables.scss';
 
-.navbar {
+%navbarGrid {
   display: grid;
   grid-auto-flow: column;
-  gap: 3.5rem;
+  gap: 3rem;
+}
+%navbarSelected {
+  color: $primaryLightGreenBlue !important;
+  -webkit-text-fill-color: unset !important;
+}
+%navbarA {
+  font-size: 16px;
+  line-height: 1.63;
+  color: $secondaryWhite;
+  text-decoration: none;
+  background: linear-gradient(
+    to right,
+    $primaryLightGreenBlue,
+    $primaryLightGreenBlue 50%,
+    $secondaryWhite 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 375ms ease;
+  text-decoration: none; // text decorations are clipped in WebKit browsers
+}
 
+.navbar__light {
+  @extend %navbarGrid;
   &__selected {
-    color: $primaryLightGreenBlue !important;
-    -webkit-text-fill-color: unset !important;
+    @extend %navbarSelected;
   }
-
-  a {
-    font-size: 16px;
-    line-height: 1.63;
-    color: $secondaryWhite;
-    text-decoration: none;
-    background: linear-gradient(
-      to right,
-      $primaryLightGreenBlue,
-      $primaryLightGreenBlue 50%,
-      $secondaryWhite 50%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: background-position 375ms ease;
-    text-decoration: none; // text decorations are clipped in WebKit browsers
+  & a {
+    @extend %navbarA;
+    color: #1f2935;
+    -webkit-text-fill-color: #1f2935;
     &:hover {
       background-position: 0 100%;
     }
+  }
+}
+
+.navbar__dark {
+  @extend %navbarGrid;
+  &__selected {
+    @extend %navbarSelected;
+  }
+  & a {
+    @extend %navbarA;
+    &:hover {
+      background-position: 0 100%;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .navbar__dark {
+    grid-auto-flow: unset;
+  }
+  .navbar__light {
+    grid-auto-flow: unset;
   }
 }
