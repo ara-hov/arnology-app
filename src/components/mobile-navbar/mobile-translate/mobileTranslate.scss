@@ -1,7 +1,7 @@
 @import '../../../styles/variables';
 
 .mobile__translate__container {
-  margin-top: 2.5rem;
+  margin: 2.5rem 0 0 0;
 
   &--item {
     font-size: 1.6rem;
@@ -18,8 +18,8 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 767px) {
   .mobile__translate__container {
-    margin-left: 1rem;
+    text-align: center;
   }
 }

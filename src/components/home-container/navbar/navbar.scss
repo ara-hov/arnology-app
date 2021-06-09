@@ -4,6 +4,7 @@
   display: grid;
   grid-auto-flow: column;
   gap: 3rem;
+  white-space: nowrap;
 }
 %navbarSelected {
   color: $primaryLightGreenBlue !important;
@@ -56,9 +57,39 @@
     }
   }
 }
+
+@media screen and (max-width: 1500px) {
+  %navbarGrid {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+  }
+
+  %navbarA {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1165px) {
+  %navbarGrid {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+  }
+
+  %navbarA {
+    font-size: 12.4px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  %navbarGrid {
+    gap: 2rem;
+  }
+
   .navbar__dark {
     grid-auto-flow: unset;
+    padding-top: 6rem;
   }
   .navbar__light {
     grid-auto-flow: unset;

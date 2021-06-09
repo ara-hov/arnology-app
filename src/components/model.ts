@@ -44,3 +44,8 @@ export interface SelectType {
   value: string;
   label: any | ReactNode;
 }
+
+export interface ApproachType {
+  title: string;
+  content: Array<string>;
+}

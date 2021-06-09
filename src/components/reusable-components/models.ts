@@ -11,6 +11,7 @@ export interface ContentDescriptionProps {
   secondLine?: string;
   info?: string;
   buttonClassName?: string;
+  buttonText?: string;
 }
 export interface PopupProps {
   isOpen?: boolean;

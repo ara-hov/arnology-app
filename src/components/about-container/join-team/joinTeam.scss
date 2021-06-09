@@ -1,0 +1,50 @@
+@import './../../../styles/variables';
+@import './../../../styles/common';
+
+.join__team__wrapper {
+  background-color: $primaryDarkGrey;
+
+  &__container {
+    max-width: 139.6rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 8rem 1rem;
+
+    &__text {
+      &--title {
+        font-size: 3.2rem;
+        font-weight: 500;
+        line-height: 1.31;
+        letter-spacing: 0.45px;
+        color: $secondaryWhite;
+      }
+      &--info {
+        max-width: 68.1rem;
+        font-size: 2.2rem;
+        font-weight: 300;
+        line-height: 1.36;
+        letter-spacing: 0.31px;
+        color: $secondaryWhite;
+        margin-top: 3rem;
+      }
+
+      &--btn {
+        margin-top: 2.5rem;
+        @include actionButtons(
+          1px solid $primaryLightGreenBlue,
+          $secondaryWhite,
+          $primaryLightGreenBlue,
+          3px,
+          64px,
+          224px
+        );
+      }
+    }
+    &__image {
+      img {
+        width: 36rem;
+      }
+    }
+  }
+}

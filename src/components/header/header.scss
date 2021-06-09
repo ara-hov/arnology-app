@@ -1,7 +1,6 @@
 @import '../../styles/common.scss';
 @import '../../styles/variables.scss';
 
-
 %Dropdown-root {
   .Dropdown-control {
     background-color: transparent;
@@ -42,7 +41,7 @@
   left: 13.3vw;
   right: 14.1vw;
   top: 5%;
-  gap: 11vw;
+  gap: 7vw;
   a {
     svg {
       width: 15vw;
@@ -54,22 +53,21 @@
     align-items: center;
     gap: 2vw;
     justify-items: flex-end;
-    
-    .Dropdown__root__dark{
+
+    .Dropdown__root__dark {
       @extend %Dropdown-root;
-    }    
-    .Dropdown__root__light{
+    }
+    .Dropdown__root__light {
       @extend %Dropdown-root;
-      .Dropdown-control{
+      .Dropdown-control {
         color: $primaryDarkGrey;
         .Dropdown-arrow-wrapper {
           .Dropdown-arrow {
             border-color: $primaryDarkGrey transparent transparent;
           }
         }
-      }      
+      }
     }
-
   }
 
   &__mobile {
@@ -85,10 +83,10 @@
       display: none;
     }
   }
-  
-  &__button--dark{
-      cursor: pointer;
-      @include actionButtons(
+
+  &__button--dark {
+    cursor: pointer;
+    @include actionButtons(
       1px solid $primaryLightGreenBlue,
       $primaryLightGreenBlue,
       transparent,
@@ -97,21 +95,20 @@
       17.5rem
     );
   }
-  &__button--light{
+  &__button--light {
     cursor: pointer;
     @include actionButtons(
-    1px solid $secondaryWhite,
-    $secondaryWhite,
-    $primaryLightGreenBlue,
-    5px,
-    48px,
-    17.5rem
-  );
-}
+      1px solid $secondaryWhite,
+      $secondaryWhite,
+      $primaryLightGreenBlue,
+      5px,
+      48px,
+      17.5rem
+    );
+  }
 }
 
 .is-open .Dropdown-arrow {
-  // border-color: $secondaryWhite transparent transparent !important;
   border-width: 7px 7px 0 !important;
   transform: rotate(180deg);
 }
@@ -131,9 +128,24 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1500px) {
   .header__container {
     gap: 2vw;
+  }
+}
+
+@media screen and (max-width: 1165px) {
+  .header__container {
+    &__button--dark {
+      @include actionButtons(
+        1px solid $secondaryWhite,
+        $secondaryWhite,
+        $primaryLightGreenBlue,
+        5px,
+        48px,
+        14rem
+      );
+    }
   }
 }
 
@@ -167,7 +179,7 @@
           }
         }
       }
-    }    
+    }
 
     &__mobile__menu {
       display: block;
@@ -194,7 +206,7 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 767px) {
   .header__container {
     left: 5.3vw;
     right: 5.1vw;
@@ -203,13 +215,13 @@
         width: 16rem;
       }
     }
-    &__mobile__menu {
-      &--logo {
-        width: 15rem;
-      }
-      .hamburger-react {
-        left: 5rem;
-      }
-    }
+    // &__mobile__menu {
+    //   &--logo {
+    //     width: 15rem;
+    //   }
+    //   .hamburger-react {
+    //     left: 5rem;
+    //   }
+    // }
   }
 }

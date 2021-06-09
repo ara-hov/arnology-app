@@ -1,10 +1,21 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface HeaderLogoProps {
   className?: string;
 }
 
 const HeaderLogo: FC<HeaderLogoProps> = ({ className }) => {
+  const { pathname } = useLocation();
+  const [color, setColor] = useState('#e5e7eb');
+
+  useEffect(() => {
+    if (pathname === '/contact' || pathname === '/works') {
+      setColor('#1f2937');
+    } else {
+      setColor('#e5e7eb');
+    }
+  }, [pathname]);
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -24,9 +35,7 @@ const HeaderLogo: FC<HeaderLogoProps> = ({ className }) => {
           <stop offset='0' stopColor='#e5e7eb' />
           <stop offset='1' stopColor='#e5e7eb' />
         </linearGradient>
-        <style>
-          {` .cls-1{fill:url(#linear-gradient)}.cls-2{fill:#e5e7eb}`}
-        </style>
+        <style>{` .cls-1{fill:url(#linear-gradient)}.cls-2{fill:${color}}`}</style>
       </defs>
       <g id='arn_logo' transform='translate(-272 -58.429)'>
         <g id='Group_5504' transform='translate(272 58.947)'>
@@ -99,7 +108,7 @@ const HeaderLogo: FC<HeaderLogoProps> = ({ className }) => {
         </g>
         <path
           id='Rectangle_2324'
-          fill='#d1d5db'
+          fill={color}
           d='M0 0H1V37.053H0z'
           transform='translate(340 58.429)'
         />

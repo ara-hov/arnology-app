@@ -8,6 +8,8 @@ import Button from '../reusable-components/button/Button';
 import MobileNavbar from '../mobile-navbar/MobileNavbar';
 import { SelectType } from '../model';
 import './header.scss';
+import { useActions } from '../../hooks/useActions';
+import MobileLogo from '../icon-containers/MobileLogo';
 
 const Header: FC = () => {
   const { pathname } = useLocation();
@@ -20,6 +22,13 @@ const Header: FC = () => {
     { value: 'hy', label: 'HY' },
     { value: 'fr', label: 'FR' },
   ]);
+
+  const { getNavlinks } = useActions();
+
+  useEffect(() => {
+    getNavlinks(lang.value);
+    // eslint-disable-next-line
+  }, [lang]);
 
   useEffect(() => {
     isOpen
@@ -40,7 +49,7 @@ const Header: FC = () => {
   };
 
   useEffect(() => {
-    if (pathname === '/' || pathname === '/contact') {
+    if (pathname === '/' || pathname === '/about') {
       setColor('#ffffff');
     } else {
       setColor('#1f2935');
@@ -56,7 +65,7 @@ const Header: FC = () => {
         <Navbar />
         <Button
           className={
-            pathname === '/'
+            pathname === '/' || pathname === '/about'
               ? 'header__container__button--dark'
               : 'header__container__button--light'
           }
@@ -64,7 +73,9 @@ const Header: FC = () => {
         ></Button>
         <Dropdown
           className={
-            pathname === '/' ? 'Dropdown__root__dark' : 'Dropdown__root__light'
+            pathname === '/' || pathname === '/about'
+              ? 'Dropdown__root__dark'
+              : 'Dropdown__root__light'
           }
           options={langOptions}
           value={lang}
@@ -90,7 +101,8 @@ const Header: FC = () => {
             : 'header__container__mobile__menu__hide'
         }
       >
-        <Logo className='header__container__mobile__menu--logo' />
+        <MobileLogo className='header__container__mobile__menu--logo' />
+        {/* <Logo className='header__container__mobile__menu--logo' /> */}
         <MobileNavbar shoWMenu={shoWMenu} selectedLang={lang.label} />
       </div>
     </div>

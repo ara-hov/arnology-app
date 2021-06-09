@@ -1,8 +1,6 @@
 import { FC } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import './navbar.scss';
-import { useEffect } from 'react';
-import { useActions } from '../../../hooks/useActions';
 import { useTypedSelector } from './../../../hooks/useTypedSelector';
 
 interface NavbarProps {
@@ -11,22 +9,21 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ shoWMenu }) => {
   const { pathname } = useLocation();
-  const { getNavlinks } = useActions();
   const { navlinks } = useTypedSelector((state) => state.homeReduser);
-  console.log(navlinks, 'navlinks');
-  useEffect(() => {
-    getNavlinks('EN');
-  }, []);
 
   return (
     <div
-      className={pathname === '/' ? 'navbar__dark' : 'navbar__light'}
+      className={
+        pathname === '/' || pathname === '/about'
+          ? 'navbar__dark'
+          : 'navbar__light'
+      }
       onClick={shoWMenu}
     >
-      {/* {navlinks.map((link) => {
+      {navlinks.map((link) => {
         return (
           <NavLink
-            to='/'
+            to={`${link.name}`}
             activeClassName={
               pathname === '/'
                 ? 'navbar__dark__selected'
@@ -37,8 +34,8 @@ const Navbar: FC<NavbarProps> = ({ shoWMenu }) => {
             {link.name}
           </NavLink>
         );
-      })} */}
-      <NavLink to='/about' activeClassName='navbar__dark__selected'>
+      })}
+      {/* <NavLink to='/about' activeClassName='navbar__dark__selected'>
         About
       </NavLink>
       <NavLink to='/services' activeClassName='navbar__light__selected'>
@@ -52,7 +49,7 @@ const Navbar: FC<NavbarProps> = ({ shoWMenu }) => {
       </NavLink>
       <NavLink to='/contact' activeClassName='navbar__light__selected'>
         Contacts
-      </NavLink>
+      </NavLink> */}
     </div>
   );
 };

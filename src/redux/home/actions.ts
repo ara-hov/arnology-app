@@ -13,13 +13,11 @@ type ThunkType<T extends Action> = ThunkAction<
 >;
 
 export const getNavlinks = (lang: string): ThunkType<HomeTypes> => {
-  console.log(lang);
-
   return async (dispatch) => {
     try {
       const response = await axios.get(`${API_URL}/sections`, {
         headers: {
-          'Content-Language': `hy`,
+          'Content-Language': lang,
         },
       });
       dispatch({
@@ -29,7 +27,7 @@ export const getNavlinks = (lang: string): ThunkType<HomeTypes> => {
     } catch (error) {
       dispatch({
         type: actionTypes.FAILURE,
-        payload: error.response.data.error,
+        payload: error.response?.data.error,
       });
     }
   };

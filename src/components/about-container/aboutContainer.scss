@@ -1,0 +1,62 @@
+@import './../../styles/variables';
+.about__wrapper {
+  &__image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    filter: brightness(0.35);
+    > .imageContainer {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__desc {
+    > .contentDescription {
+      h1 {
+        width: 48.9rem;
+        font-size: 8.7rem;
+        font-weight: bold;
+        line-height: 1.23;
+        letter-spacing: 1.74px;
+      }
+      .blue__line {
+        width: 17rem;
+      }
+      .contentDescription__info {
+        width: 66.9rem;
+        font-size: 1.8rem;
+        line-height: 1.67;
+        letter-spacing: 0.25px;
+      }
+    }
+  }
+
+  &__slider {
+    background-color: $secondaryBackgroundGrey;
+    padding: 7.3rem 0 11rem 0;
+    position: relative;
+    &--title {
+      text-align: center;
+      font-size: 4.8rem;
+      font-weight: bold;
+      line-height: 1.21;
+      letter-spacing: 0.96px;
+      color: $primaryDarkGrey;
+    }
+    .testimonials__slide--info {
+      margin: 8.6rem 0 6rem 0;
+      width: 50%;
+    }
+
+    .testimonials__slide--icon {
+      right: 18%;
+      top: 7rem;
+    }
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+      bottom: 5.3rem;
+    }
+  }
+}
