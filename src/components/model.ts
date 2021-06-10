@@ -28,9 +28,9 @@ export type servicesType = {
 
 export type testimonialsType = {
   id?: number | string;
-  info?: string;
-  name?: string;
-  profession?: string;
+  info: string;
+  name: string;
+  profession: string;
 };
 
 export type worksType = {
@@ -48,4 +48,10 @@ export interface SelectType {
 export interface ApproachType {
   title: string;
   content: Array<string>;
+}
+
+export interface AboutWorksDataType {
+  img: ReactNode;
+  result: number;
+  text: string;
 }

@@ -8,19 +8,21 @@ const Approach = () => {
     <div className='approach__container'>
       <h3 className='approach__container--title'>OUR APPROACH</h3>
       <p className='approach__container--text'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-        perspiciatis deserunt voluptatum iusto animi.
+        Whether you are fortune 500 or a startup we can help you to unlock
+        opportunity by creating human-centered products.
       </p>
       <div className='approach__container__content'>
-        {approachData.map((item: ApproachType) => {
+        {approachData.map((item: ApproachType, i: number) => {
           return (
-            <div>
+            <div key={i}>
               <Title
                 title={item.title}
                 className='approach__container__content--title'
               />
-              {item?.content?.map((el: string) => (
-                <p className='approach__container__content--text'>{el}</p>
+              {item?.content?.map((el: string, index: number) => (
+                <p className='approach__container__content--text' key={index}>
+                  {el}
+                </p>
               ))}
             </div>
           );

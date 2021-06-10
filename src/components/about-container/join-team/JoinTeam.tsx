@@ -1,6 +1,6 @@
 import Button from '../../reusable-components/button/Button';
 import './joinTeam.scss';
-import Join_img from './../../../assets/images/contacts.png';
+import Group_img from '../../../assets/images/Group.png';
 
 const JoinTeam = () => {
   return (
@@ -11,8 +11,8 @@ const JoinTeam = () => {
             Love building digital products? <br /> Join our team!
           </p>
           <p className='join__team__wrapper__container__text--info'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repelle
-            ndus esse magni iure enim animi rem vitae.
+            We’re always on the lookout for talented, ambitious team members.
+            Get in touch to discuss opportunities.
           </p>
           <Button
             buttonText={'CAREER'}
@@ -20,8 +20,12 @@ const JoinTeam = () => {
           />
         </div>
         <div className='join__team__wrapper__container__image'>
-          <img src={Join_img} alt='img' />
+          <img src={Group_img} alt='img' />
         </div>
+        <Button
+          buttonText={'CAREER'}
+          className='join__team__wrapper__container__text--mobilebtn'
+        />
       </div>
     </div>
   );

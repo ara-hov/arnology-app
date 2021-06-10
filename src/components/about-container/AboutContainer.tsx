@@ -41,9 +41,9 @@ const AboutContainer = () => {
             clickable: true,
           }}
         >
-          {testimonials.map((item: testimonialsType) => {
+          {testimonials.map((item: testimonialsType, index: number) => {
             return (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={index}>
                 <TestimonialsSlide
                   info={item.info}
                   name={item.name}

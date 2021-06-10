@@ -1,4 +1,6 @@
 import './aboutWorks.scss';
+import { aboutWorksData } from './aboutWorksData';
+import { AboutWorksDataType } from '../../model';
 
 const AboutWorks = () => {
   return (
@@ -13,7 +15,22 @@ const AboutWorks = () => {
         </p>
       </div>
 
-      <div className='about__works__container__infoBlock'></div>
+      <div className='about__works__container__infoBlock'>
+        {aboutWorksData.map((item: AboutWorksDataType, index: number) => {
+          return (
+            <div
+              className='about__works__container__infoBlock__item'
+              key={index}
+            >
+              <div>{item.img}</div>
+              <div>
+                <p>{item.result}</p>
+                <p>{item.text}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
