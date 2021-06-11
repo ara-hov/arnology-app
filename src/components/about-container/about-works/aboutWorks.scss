@@ -42,8 +42,9 @@
           font-size: 9rem;
           font-weight: bold;
           line-height: 1.23;
-          letter-spacing: -2.08px;
+          letter-spacing: 1.08px;
           color: $primaryDarkGrey;
+          font-family: Trump gothic east bold, sans-serif;
         }
         > p:last-child {
           font-size: 2.2rem;
@@ -91,7 +92,7 @@
     }
     &__infoBlock {
       max-width: 34rem;
-      padding: 4.8rem 0 0 0;
+      padding: 4.8rem 2rem 0 2rem;
       row-gap: 4.7rem;
       &__item {
         > div:first-child {

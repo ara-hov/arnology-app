@@ -14,7 +14,7 @@ const Navbar: FC<NavbarProps> = ({ shoWMenu }) => {
   return (
     <div
       className={
-        pathname === '/' || pathname === '/about'
+        pathname === '/' || pathname === '/about' || pathname === '/career'
           ? 'navbar__dark'
           : 'navbar__light'
       }

@@ -1,0 +1,134 @@
+@import './../../../styles/variables';
+@import './../../../styles/common';
+
+.position__container {
+  background-color: $secondaryBackgroundWhite;
+  padding: 10.3rem 0 6.3rem;
+  &--title {
+    font-size: 4.8rem;
+    font-weight: bold;
+    line-height: 1.21;
+    letter-spacing: 0.96px;
+    color: $primaryDarkGrey;
+    text-align: center;
+  }
+
+  &__content {
+    max-width: 116.8rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    column-gap: 6.4rem;
+    padding-top: 11.4rem;
+    &__item:first-of-type,
+    :nth-of-type(2) {
+      border-top: 1px solid $secondaryBorderGrey;
+    }
+    &__item {
+      display: flex;
+      height: 9.5rem;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $secondaryBorderGrey;
+      padding: 0 2.4rem;
+      & > div {
+        h3 {
+          font-size: 3.2rem;
+          font-weight: bold;
+          line-height: 1.25;
+          letter-spacing: 0.64px;
+          color: $primaryDarkGrey;
+        }
+        p {
+          font-size: 1.6rem;
+          font-weight: 300;
+          line-height: 1.19;
+          letter-spacing: 0.32px;
+          color: $primaryDarkGrey;
+          margin-top: 1rem;
+        }
+      }
+      a {
+        color: #ff6943;
+        font-size: 4rem;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+  &__getJob {
+    max-width: 60rem;
+    margin: 16rem auto 0;
+    &--subTitle {
+      max-width: 40rem;
+      font-size: 2.2rem;
+      line-height: 1.36;
+      letter-spacing: 0.31px;
+      color: $primaryDarkGrey;
+      margin: auto;
+      text-align: center;
+    }
+    &__inputGroup {
+      display: flex;
+      margin-top: 5rem;
+      &--email {
+        width: 38.5rem !important;
+        height: 6.4rem !important;
+        border-radius: 3px 0 0 3px;
+        border: solid 1px $secondaryBorderGrey;
+        z-index: 1;
+        padding-left: 2rem;
+      }
+
+      ::placeholder {
+        color: $primaryDarkGrey;
+        opacity: 1;
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.88;
+        letter-spacing: 0.22px;
+      }
+      :-ms-input-placeholder {
+        color: $primaryDarkGrey;
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.88;
+        letter-spacing: 0.22px;
+      }
+
+      ::-ms-input-placeholder {
+        color: $primaryDarkGrey;
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.88;
+        letter-spacing: 0.22px;
+      }
+      &--button {
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: 1.88;
+        letter-spacing: 0.22px;
+        @include actionButtons(
+          1px solid $primaryLightGreenBlue,
+          $secondaryWhite,
+          $primaryLightGreenBlue,
+          0 3px 3px 0,
+          64px,
+          215px
+        );
+      }
+    }
+    &--text {
+      font-size: 1.6rem;
+      margin-top: 3.3rem;
+      font-weight: 300;
+      line-height: 1.88;
+      letter-spacing: 0.22px;
+      color: $primaryDarkGrey;
+      text-align: center;
+      > span {
+        text-decoration: underline;
+      }
+    }
+  }
+}

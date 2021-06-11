@@ -65,7 +65,7 @@ const Header: FC = () => {
         <Navbar />
         <Button
           className={
-            pathname === '/' || pathname === '/about'
+            pathname === '/' || pathname === '/about' || pathname === '/career'
               ? 'header__container__button--dark'
               : 'header__container__button--light'
           }
@@ -73,7 +73,7 @@ const Header: FC = () => {
         ></Button>
         <Dropdown
           className={
-            pathname === '/' || pathname === '/about'
+            pathname === '/' || pathname === '/about' || pathname === '/career'
               ? 'Dropdown__root__dark'
               : 'Dropdown__root__light'
           }

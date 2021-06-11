@@ -55,3 +55,23 @@ export interface AboutWorksDataType {
   result: number;
   text: string;
 }
+
+export interface CareerPositionType {
+  profesion: string;
+  location: string;
+  id: string;
+}
+
+export interface CareerOfferType {
+  icon: ReactNode;
+  title: string;
+  desc: string;
+  id: string;
+}
+
+export interface CareerValueType {
+  icon: ReactNode;
+  title: string;
+  desc: string;
+  id: string;
+}
