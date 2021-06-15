@@ -61,6 +61,7 @@ export interface InputProps {
   type?: string;
   className?: string;
   checked?: boolean;
+  id?: string;
   onChange?: (
     e:
       | React.ChangeEvent<HTMLInputElement>
@@ -71,7 +72,7 @@ export interface InputProps {
   onBlur?: (
     e: FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLTextAreaElement>
   ) => void;
-  errorsMessage?: string | boolean;
+  errorsMessage?: string | boolean | any;
 }
 
 export interface TitleProps {

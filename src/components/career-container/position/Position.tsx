@@ -33,7 +33,7 @@ const Position = () => {
                 <h3>{item.profesion}</h3>
                 <p>{item.location}</p>
               </div>
-              <Link to='/'>+</Link>
+              <Link to='/career/:id'>+</Link>
             </div>
           );
         })}

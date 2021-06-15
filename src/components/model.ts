@@ -75,3 +75,9 @@ export interface CareerValueType {
   desc: string;
   id: string;
 }
+
+export interface ICareerMorePositionType {
+  title: string;
+  desc: Array<string>;
+  id: string;
+}

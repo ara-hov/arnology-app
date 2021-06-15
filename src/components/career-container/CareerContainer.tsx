@@ -5,6 +5,7 @@ import ContentDescription from './../reusable-components/content-description/Con
 import Position from './position/Position';
 import Offer from './offers/Offer';
 import Values from './values/Values';
+import { Link } from 'react-router-dom';
 
 const CareerContainer = () => {
   return (
@@ -23,6 +24,11 @@ const CareerContainer = () => {
       <Position />
       <Offer />
       <Values />
+      <div className='career__wrapper__footer'>
+        <p>
+          ARE YOU ALREADY A MEMEBER? PLEASE <Link to='/'>LOGIN</Link>
+        </p>
+      </div>
     </div>
   );
 };

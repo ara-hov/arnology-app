@@ -12,6 +12,7 @@ const Input = ({
   checked,
   onBlur,
   errorsMessage,
+  id,
 }: InputProps) => {
   return (
     <div className='input__container'>
@@ -24,6 +25,7 @@ const Input = ({
         onChange={onChange}
         checked={checked}
         onBlur={onBlur}
+        id={id}
       />
       {errorsMessage && (
         <Fade top>

@@ -1,0 +1,11 @@
+@import './../../styles/variables';
+
+.careerMore__wrapper {
+  background-color: $secondaryBackgroundWhite;
+  padding-top: 18rem;
+
+  &__container {
+    width: 80rem;
+    margin: auto;
+  }
+}

@@ -1,3 +1,5 @@
+@import './../../styles/variables';
+
 .career__wrapper {
   &__image {
     position: relative;
@@ -28,6 +30,70 @@
         font-size: 1.8rem;
         line-height: 1.67;
         letter-spacing: 0.25px;
+      }
+    }
+  }
+  &__footer {
+    height: 12.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f2937;
+    color: $primaryDarkGrey;
+    > p {
+      opacity: 0.9;
+      font-size: 3.2rem;
+      font-weight: bold;
+      line-height: 1.25;
+      letter-spacing: 0px;
+      color: $secondaryWhite;
+      > a {
+        color: $secondaryWhite;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .career__wrapper {
+    &__desc {
+      > .contentDescription {
+        h1 {
+          width: 36rem;
+          font-size: 7.2rem;
+        }
+        .contentDescription__info {
+          width: 63rem;
+          font-size: 1.6rem;
+          margin-top: 3rem;
+        }
+      }
+    }
+    &__footer {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .career__wrapper {
+    &__desc {
+      > .contentDescription {
+        h1 {
+          width: 24rem;
+          font-size: 4.8rem;
+          line-height: 1.21;
+          letter-spacing: 0.96px;
+        }
+        .blue__line {
+          margin-top: 4rem;
+        }
+        .contentDescription__info {
+          width: 26rem;
+          font-size: 1.4rem;
+          line-height: 1.43;
+          letter-spacing: 0.25px;
+        }
       }
     }
   }

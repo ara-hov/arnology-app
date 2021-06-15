@@ -49,7 +49,7 @@ const Header: FC = () => {
   };
 
   useEffect(() => {
-    if (pathname === '/' || pathname === '/about') {
+    if (pathname === '/' || pathname === '/about' || pathname === '/career') {
       setColor('#ffffff');
     } else {
       setColor('#1f2935');

@@ -3,7 +3,7 @@
 
 .position__container {
   background-color: $secondaryBackgroundWhite;
-  padding: 10.3rem 0 6.3rem;
+  padding: 10.3rem 2rem 6.3rem;
   &--title {
     font-size: 4.8rem;
     font-weight: bold;
@@ -128,6 +128,102 @@
       text-align: center;
       > span {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .position__container {
+    padding: 8rem 2rem 6rem;
+    &__content {
+      max-width: 58rem;
+      grid-template-columns: 12fr;
+      padding-top: 4.8rem;
+      &__item:nth-of-type(2) {
+        border-top: unset;
+      }
+    }
+    &__getJob {
+      margin: 13rem auto 0;
+      &--text {
+        margin-top: 3.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .position__container {
+    background-color: $secondaryBackgroundWhite;
+    padding: 4.8rem 2rem 5.4rem;
+    &--title {
+      font-size: 2.4rem;
+      line-height: 1.25;
+      letter-spacing: 0.48px;
+    }
+
+    &__content {
+      max-width: 100%;
+      grid-template-columns: 12fr;
+      column-gap: unset;
+      padding-top: 5.1rem;
+
+      &__item {
+        height: 6rem;
+        & > div {
+          h3 {
+            font-size: 1.6rem;
+            line-height: 1.19;
+            letter-spacing: 0.32px;
+          }
+          p {
+            font-size: 1.3rem;
+            line-height: 1.15;
+            letter-spacing: 0.26px;
+            margin-top: 0.6rem;
+          }
+        }
+        a {
+          font-size: 3rem;
+        }
+      }
+    }
+    &__getJob {
+      max-width: 100%;
+      margin: 6.4rem auto 0;
+      &--subTitle {
+        max-width: 25rem;
+        font-size: 1.4rem;
+        line-height: 1.79;
+        letter-spacing: 0.2px;
+      }
+      &__inputGroup {
+        flex-direction: column;
+        margin-top: 3.2rem;
+        row-gap: 1.7rem;
+        &--email {
+          width: 100% !important;
+          height: 4.8rem !important;
+          padding-left: 2rem;
+        }
+
+        &--button {
+          @include actionButtons(
+            1px solid $primaryLightGreenBlue,
+            $secondaryWhite,
+            $primaryLightGreenBlue,
+            0 3px 3px 0,
+            48px,
+            100%
+          );
+        }
+      }
+      &--text {
+        font-size: 1.4rem;
+        margin-top: 2.4rem;
+        line-height: 2.14;
+        letter-spacing: 0.2px;
       }
     }
   }
