@@ -20,10 +20,11 @@ const Navbar: FC<NavbarProps> = ({ shoWMenu }) => {
       }
       onClick={shoWMenu}
     >
-      {navlinks.map((link) => {
+      {/* {navlinks.map((link) => {
+        //when will be backend
         return (
           <NavLink
-            to={`${link.name}`}
+            to={`${link.link}`}
             activeClassName={
               pathname === '/'
                 ? 'navbar__dark__selected'
@@ -34,8 +35,8 @@ const Navbar: FC<NavbarProps> = ({ shoWMenu }) => {
             {link.name}
           </NavLink>
         );
-      })}
-      {/* <NavLink to='/about' activeClassName='navbar__dark__selected'>
+      })} */}
+      <NavLink to='/about' activeClassName='navbar__dark__selected'>
         About
       </NavLink>
       <NavLink to='/services' activeClassName='navbar__light__selected'>
@@ -49,7 +50,7 @@ const Navbar: FC<NavbarProps> = ({ shoWMenu }) => {
       </NavLink>
       <NavLink to='/contact' activeClassName='navbar__light__selected'>
         Contacts
-      </NavLink> */}
+      </NavLink>
     </div>
   );
 };
