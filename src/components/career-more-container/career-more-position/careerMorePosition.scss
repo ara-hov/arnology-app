@@ -97,8 +97,75 @@
       }
     }
     .unList {
+      font-size: 1.6rem;
       &::before {
         content: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .morePosition__container {
+    &__link {
+      letter-spacing: -0.5px;
+      font-size: 1.7rem;
+      line-height: 1.28;
+      & > a {
+        svg {
+          width: 2rem;
+          height: 1rem;
+          margin-right: 1.7rem;
+        }
+      }
+    }
+    &__header {
+      padding-top: 3.5rem;
+      > h1 {
+        font-size: 3.2rem;
+        line-height: 1.25;
+        letter-spacing: 0.64px;
+      }
+      &--subTitle {
+        font-family: Rubik;
+        font-size: 1.3rem;
+        font-weight: 300;
+        line-height: 1.15;
+        letter-spacing: 0.26px;
+        margin-top: 2.4rem;
+      }
+      & .blue__line {
+        width: 3.7rem;
+        margin: 1.6rem auto 3rem;
+      }
+      &--text {
+        width: 100%;
+        font-size: 1.4rem;
+        line-height: 1.79;
+        letter-spacing: 0.2px;
+      }
+      &--image {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 3px;
+      }
+    }
+
+    &__content {
+      > div {
+        margin-top: 3.2rem;
+        > h3 {
+          font-size: 2.4rem;
+          letter-spacing: 0.48px;
+          color: $primaryDarkGrey;
+          margin-bottom: 2rem;
+        }
+
+        ul li {
+          font-size: 1.4rem;
+          line-height: 1.79;
+          letter-spacing: 0.2px;
+        }
       }
     }
   }
