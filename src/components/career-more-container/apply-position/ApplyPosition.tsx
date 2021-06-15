@@ -5,21 +5,11 @@ import * as Yup from 'yup';
 import Input from '../../reusable-components/input/Input';
 import TextArea from '../../reusable-components/textarea/TextArea';
 import PhoneInput from 'react-phone-input-2';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const ApplyPosition = () => {
   const [phone, setPhone] = useState<string>('');
   const emailRegExp = /^^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-
-  useEffect(() => {
-    console.log(
-      document.getElementById('file'),
-      '4444444444444444444444444444'
-    );
-  }, []);
-
-  // const fd = new FormData(document.getElementById('file'));
-  // fd.append('CustomField', 'This is some extra data');
 
   const ContactUsSchema = Yup.object().shape({
     fullName: Yup.string()
