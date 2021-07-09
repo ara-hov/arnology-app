@@ -4,14 +4,37 @@ import './navbar.scss';
 
 interface NavbarProps {
   shoWMenu?: () => void;
+  // navItems?:any[];
 }
 
 const Navbar: FC<NavbarProps> = ({ shoWMenu }) => {
- const {pathname}
- = useLocation() 
- 
+  const { pathname } = useLocation();  
+
   return (
-    <div className={pathname === "/" ? 'navbar__dark' : 'navbar__light'} onClick={shoWMenu}>    
+    <div
+      className={
+        pathname === '/' || pathname === '/about' || pathname === '/career'
+          ? 'navbar__dark'
+          : 'navbar__light'
+      }
+      onClick={shoWMenu}
+    >
+      {/* {navlinks.map((link) => {
+        //when will be backend
+        return (
+          <NavLink
+            to={`${link.link}`}
+            activeClassName={
+              pathname === '/'
+                ? 'navbar__dark__selected'
+                : 'navbar__light__selected'
+            }
+            key={link.id}
+          >
+            {link.name}
+          </NavLink>
+        );
+      })} */}
       <NavLink to='/about' activeClassName='navbar__dark__selected'>
         About
       </NavLink>

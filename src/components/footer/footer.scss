@@ -16,11 +16,17 @@
       &--title {
         font-size: 1.6rem;
         color: #fafafa;
+        line-height: 2.63;
+        letter-spacing: 0.22px;
+        font-family: Rubik;
+        font-weight: 500;
+        opacity: 0.9;
       }
       &--text {
         font-size: 1.4rem;
         color: $secondaryWhite;
         margin-top: 1.8rem;
+        opacity: 0.65;
       }
     }
     &__image {
@@ -83,6 +89,11 @@
       flex-direction: column-reverse;
       text-align: center;
       gap: 4rem;
+      margin-left: auto;
+      margin-right: auto;
+      &--text {
+        font-size: 1.2rem;
+      }
       .socialIcons__container {
         justify-content: center;
       }

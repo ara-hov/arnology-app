@@ -1,8 +1,8 @@
-@import "../../../styles/variables";
-@import "../../../styles/common";
+@import '../../../styles/variables';
+@import '../../../styles/common';
 
 .worksContainer__header {
-  @include displayCenterGrid(auto); 
+  @include displayCenterGrid(auto);
   padding: 4rem 0 2.4rem;
   &--text {
     @include textStyle($primaryDarkGrey, 2.4rem, 1.25, 0.048rem);
@@ -19,7 +19,7 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .worksContainer__header{
+  .worksContainer__header {
     padding: 4rem 0 8.6rem;
   }
 }

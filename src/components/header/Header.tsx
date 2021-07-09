@@ -1,30 +1,44 @@
-import { FC, useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Twirl as Hamburger } from "hamburger-react";
-import Dropdown from "react-dropdown";
-import Logo from "../../components/icon-containers/Logo";
-import Navbar from "../home-container/navbar/Navbar";
-import Button from "../reusable-components/button/Button";
-import MobileNavbar from "../mobile-navbar/MobileNavbar";
-import { SelectType } from "../model";
-import "./header.scss";
+import { FC, useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Twirl as Hamburger } from 'hamburger-react';
+import Dropdown from 'react-dropdown';
+import Logo from '../../components/icon-containers/Logo';
+import Navbar from '../home-container/navbar/Navbar';
+import Button from '../reusable-components/button/Button';
+import MobileNavbar from '../mobile-navbar/MobileNavbar';
+import { SelectType } from '../model';
+import './header.scss';
+import MobileLogo from '../icon-containers/MobileLogo';
+import {
+  fetchNavLinks,
+  homeSelector,
+} from '../../redux/features/home/homeSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Header: FC = () => {
   const { pathname } = useLocation();
+  const dispatch = useDispatch()
 
-  const [color, setColor] = useState("");
+  const [color, setColor] = useState('');
   const [isOpen, setOpen] = useState(false);
-  const [lang, setLang] = useState({ value: "en", label: "EN" });
+  const [lang, setLang] = useState({ value: 'en', label: 'EN' });
   const [langOptions, setLangOptions] = useState([
-    { value: "ru", label: "RU" },
-    { value: "hy", label: "HY" },
-    { value: "fr", label: "FR" },
+    { value: 'ru', label: 'RU' },
+    { value: 'hy', label: 'HY' },
+    { value: 'fr', label: 'FR' },
   ]);
+
+  // const { navLinks, loading, errors } = useSelector(homeSelector);
+  // const x = useSelector(homeSelector);
+
+  useEffect(() => {
+    dispatch(fetchNavLinks(lang.value));
+  }, [dispatch,lang.value]);
 
   useEffect(() => {
     isOpen
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "unset");
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'unset');
   }, [isOpen]);
 
   const shoWMenu = () => {
@@ -40,31 +54,40 @@ const Header: FC = () => {
   };
 
   useEffect(() => {
-    if (pathname === "/") {
-      setColor("#ffffff");
+    if (pathname === '/' || pathname === '/about' || pathname === '/career') {
+      setColor('#ffffff');
     } else {
-      setColor("#1f2935");
+      setColor('#1f2935');
     }
   }, [pathname]);
 
+  // if (loading) {
+  //   return <h1>Loading...</h1>;
+  // }
+  // if (errors) {
+  //   return <h1>{errors}</h1>;
+  // }
+
   return (
-    <div className="header__container">
-      <Link to="/">
-        <Logo className="logo" />
+    <div className='header__container'>
+      <Link to='/'>
+        <Logo className='logo' />
       </Link>
-      <div className="header__container__last">
+      <div className='header__container__last'>
         <Navbar />
         <Button
           className={
-            pathname === "/"
-              ? "header__container__button--dark"
-              : "header__container__button--light"
+            pathname === '/' || pathname === '/about' || pathname === '/career'
+              ? 'header__container__button--dark'
+              : 'header__container__button--light'
           }
-          buttonText="Get an estimate"
+          buttonText='Get an estimate'
         ></Button>
         <Dropdown
           className={
-            pathname === "/" ? "Dropdown__root__dark" : "Dropdown__root__light"
+            pathname === '/' || pathname === '/about' || pathname === '/career'
+              ? 'Dropdown__root__dark'
+              : 'Dropdown__root__light'
           }
           options={langOptions}
           value={lang}
@@ -72,13 +95,13 @@ const Header: FC = () => {
         />
       </div>
       <div
-        className="header__container__mobile"
+        className='header__container__mobile'
         onClick={shoWMenu}
         onMouseOver={() => {
-          setColor("#03c4c7");
+          setColor('#03c4c7');
         }}
         onMouseLeave={() =>
-          setColor(`${pathname === "/" ? "#ffffff" : "#1f2935"}`)
+          setColor(`${pathname === '/' ? '#ffffff' : '#1f2935'}`)
         }
       >
         <Hamburger color={color} size={30} toggled={isOpen} toggle={setOpen} />
@@ -86,11 +109,12 @@ const Header: FC = () => {
       <div
         className={
           isOpen
-            ? "header__container__mobile__menu"
-            : "header__container__mobile__menu__hide"
+            ? 'header__container__mobile__menu'
+            : 'header__container__mobile__menu__hide'
         }
       >
-        <Logo className="header__container__mobile__menu--logo" />
+        <MobileLogo className='header__container__mobile__menu--logo' />
+        {/* <Logo className='header__container__mobile__menu--logo' /> */}
         <MobileNavbar shoWMenu={shoWMenu} selectedLang={lang.label} />
       </div>
     </div>
