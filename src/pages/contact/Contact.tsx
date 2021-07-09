@@ -1,11 +1,13 @@
 import './contact.scss';
+import ContactContainer from './../../components/contact-container/ContactContainer';
 
 const Contact = () => {
   return (
     <div>
-      <h1>Contact</h1>
+      <ContactContainer />
     </div>
   );
 };
+
 
 export default Contact;

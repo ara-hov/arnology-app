@@ -1,10 +1,10 @@
 @import '../../../styles/variables';
 @import '../../../styles/common';
 
-.cardItems__wrapper {  
+.cardItems__wrapper {
   @include displayCenterGrid(33% 33% 33%);
   grid-gap: 2.4rem;
-  padding: 7.5rem 19.1% 0;   
+  padding: 7.5rem 19.1% 0;
   &__card {
     position: relative;
     object-fit: contain;
@@ -28,13 +28,12 @@
       line-height: 0.4rem;
       letter-spacing: 0.096rem;
       color: $secondaryWhite;
-      text-transform: uppercase;     
+      text-transform: uppercase;
     }
     &--imageFooter {
       position: absolute;
       bottom: 1.57vw;
       left: 1.9vw;
-      font-family: Rubik;
       font-size: 1.33vw;
       font-weight: normal;
       font-stretch: normal;
@@ -91,7 +90,13 @@
     }
   }
 }
-@keyframes cardFade{
-  from {top:5rem;opacity: 0;}
-  to {top:0;opacity: 1;}
+@keyframes cardFade {
+  from {
+    top: 5rem;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }

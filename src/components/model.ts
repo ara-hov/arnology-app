@@ -28,9 +28,9 @@ export type servicesType = {
 
 export type testimonialsType = {
   id?: number | string;
-  info?: string;
-  name?: string;
-  profession?: string;
+  info: string;
+  name: string;
+  profession: string;
 };
 
 export type worksType = {
@@ -43,4 +43,54 @@ export type worksType = {
 export interface SelectType {
   value: string;
   label: any | ReactNode;
+}
+
+export interface ApproachType {
+  title: string;
+  content: Array<string>;
+}
+
+export interface AboutWorksDataType {
+  img: ReactNode;
+  result: number;
+  text: string;
+}
+
+export interface CareerPositionType {
+  profesion: string;
+  location: string;
+  id: string;
+}
+
+export interface CareerOfferType {
+  icon: ReactNode;
+  title: string;
+  desc: string;
+  id: string;
+}
+
+export interface CareerValueType {
+  icon: ReactNode;
+  title: string;
+  desc: string;
+  id: string;
+}
+
+export interface ICareerMorePositionType {
+  title: string;
+  desc: Array<string>;
+  id: string;
+}
+
+export interface ServiceTitleProps {
+  title?: string;
+  className?: string;
+  titleClassName?: string;
+}
+
+export interface ServicesRefProps {
+  fend:any;
+  be:any;
+  de:any;
+  mob:any;
 }

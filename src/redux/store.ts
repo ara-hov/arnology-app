@@ -1,12 +1,27 @@
-import { createStore, applyMiddleware } from 'redux'
-import logger from 'redux-logger'
-import thunk from 'redux-thunk'
-import rootReducer from './rootReducer'
+import {
+  configureStore,
+  getDefaultMiddleware,
+  ThunkAction,
+  Action,
+} from '@reduxjs/toolkit';
+import logger from 'redux-logger';
+import homeReducer from './features/home/homeSlice';
 
-const middlewares = [thunk, logger]
+const middleware = [...getDefaultMiddleware(), logger];
 
-if (process.env.NODE_ENV === 'development') {
-  middlewares.push(logger)
-}
+export const store = configureStore({
+  reducer: {
+    navLinks:homeReducer
+  },
+  middleware,
+});
 
-export const store = createStore(rootReducer, applyMiddleware(...middlewares))
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppThunk<ReturnType = void> = ThunkAction<
+  ReturnType,
+  RootState,
+  unknown,
+  Action<string>
+>;
+

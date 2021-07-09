@@ -1,9 +1,10 @@
+import AboutContainer from '../../components/about-container/AboutContainer';
 import './about.scss';
 
 const About = () => {
   return (
     <div>
-      <h1>About</h1>
+      <AboutContainer />
     </div>
   );
 };

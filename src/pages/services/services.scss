@@ -1,0 +1,12 @@
+.services__layout{
+    padding: 15rem 19.1% 0;
+    margin: 0 auto;
+    &__title{
+        margin-top: 10rem;
+        h1{
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 8.7rem;
+        }
+    }
+}
