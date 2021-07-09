@@ -29,8 +29,7 @@ const Header: FC = () => {
   ]);
 
   // const { navLinks, loading, errors } = useSelector(homeSelector);
-  const x = useSelector(homeSelector);
-  console.log(x,"*******************")
+  // const x = useSelector(homeSelector);
 
   useEffect(() => {
     dispatch(fetchNavLinks(lang.value));

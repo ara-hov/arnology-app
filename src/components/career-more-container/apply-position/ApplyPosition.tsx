@@ -24,7 +24,6 @@ const ApplyPosition = () => {
 
   const handleSubmit = (values: any) => {
     values.phone = phone;
-    console.log(values, '================');
     alert(JSON.stringify(values, null, 2));
     values = {
       fullName: '',

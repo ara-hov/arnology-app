@@ -45,7 +45,7 @@ const ServicesListItem = ({fend,be,de,mob}: ServicesRefProps) =>{
             {
                 servicesListData.map((e,i)=>{
                     return(
-                        <div className={`services__list__item ${e.left ? "services__list__itemLeft":"services__list__itemRight"}`} key={i} ref={e.ref} onClick={()=>console.log(e.ref)}>
+                        <div className={`services__list__item ${e.left ? "services__list__itemLeft":"services__list__itemRight"}`} key={i} ref={e.ref}>
                             <div className="services__list__item__text">
                                 <h2>{e.title}</h2>
                                 <p className="services__list__item__text--subtitle">{e.subtitle}</p>
