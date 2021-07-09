@@ -16,16 +16,13 @@ const MobileNavbar: FC<MobileNavbarProps> = ({ shoWMenu, selectedLang }) => {
     <Fade top fraction={0.5} delay={100} duration={1500} distance='7rem'>
       <div className='mobileNavbar__container'>
         <div className='mobileNavbar__container__navbar'>
-          <div>
-            <Navbar shoWMenu={shoWMenu} />
-            <MobileTranslate selectedLang={selectedLang} />
-            <Button
-              className='mobileNavbar__container__navbar--button'
-              buttonText='GET AN ESTIMATE'
-            />
-          </div>
+          <Navbar shoWMenu={shoWMenu} />
+          <MobileTranslate selectedLang={selectedLang} />
+          <Button
+            className='mobileNavbar__container__navbar--button'
+            buttonText='GET AN ESTIMATE'
+          />
         </div>
-
         <div className='mobileNavbar__container__iconBlock'>
           <div className='mobileNavbar__container__iconBlock--icons'>
             <SocialIcons />

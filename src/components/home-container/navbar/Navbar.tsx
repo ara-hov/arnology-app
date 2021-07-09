@@ -1,41 +1,17 @@
 import { FC } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import './navbar.scss';
-import { useTypedSelector } from './../../../hooks/useTypedSelector';
 
 interface NavbarProps {
   shoWMenu?: () => void;
 }
 
 const Navbar: FC<NavbarProps> = ({ shoWMenu }) => {
-  const { pathname } = useLocation();
-  const { navlinks } = useTypedSelector((state) => state.homeReduser);
-
+ const {pathname}
+ = useLocation() 
+ 
   return (
-    <div
-      className={
-        pathname === '/' || pathname === '/about' || pathname === '/career'
-          ? 'navbar__dark'
-          : 'navbar__light'
-      }
-      onClick={shoWMenu}
-    >
-      {/* {navlinks.map((link) => {
-        //when will be backend
-        return (
-          <NavLink
-            to={`${link.link}`}
-            activeClassName={
-              pathname === '/'
-                ? 'navbar__dark__selected'
-                : 'navbar__light__selected'
-            }
-            key={link.id}
-          >
-            {link.name}
-          </NavLink>
-        );
-      })} */}
+    <div className={pathname === "/" ? 'navbar__dark' : 'navbar__light'} onClick={shoWMenu}>    
       <NavLink to='/about' activeClassName='navbar__dark__selected'>
         About
       </NavLink>

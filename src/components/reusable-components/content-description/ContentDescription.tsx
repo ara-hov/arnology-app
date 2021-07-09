@@ -10,7 +10,6 @@ const ContentDescription: FC<ContentDescriptionProps> = ({
   secondLine,
   info,
   buttonClassName,
-  buttonText,
 }) => {
   return (
     <Fade bottom delay={100} duration={1500} distance='5rem'>
@@ -21,14 +20,12 @@ const ContentDescription: FC<ContentDescriptionProps> = ({
         ) : null}
         <BlueLine />
         <p className='contentDescription__info'>{info}</p>
-        {!!buttonText && (
-          <Button
-            className={
-              buttonClassName ? buttonClassName : 'contentDescription__button'
-            }
-            buttonText={buttonText}
-          ></Button>
-        )}
+        <Button
+          className={
+            buttonClassName ? buttonClassName : 'contentDescription__button'
+          }
+          buttonText='Get in touch'
+        ></Button>
       </div>
     </Fade>
   );

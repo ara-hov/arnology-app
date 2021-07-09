@@ -1,10 +1,9 @@
 import './career.scss';
-import CareerContainer from './../../components/career-container/CareerContainer';
 
 const Career = () => {
   return (
     <div>
-      <CareerContainer />
+      <h1>Career</h1>
     </div>
   );
 };

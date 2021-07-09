@@ -3,7 +3,7 @@ import ContentDescription from '../reusable-components/content-description/Conte
 import VideoContainer from '../reusable-components/video-container/VideoContainer';
 import PlayIcon from '../icon-containers/PlayIcon';
 import Fade from 'react-reveal/Fade';
-// import ImageContainer from './image-container/ImageContainer';
+import ImageContainer from './image-container/ImageContainer';
 import Popup from '../reusable-components/popup/Popup';
 import CloseIcon from '../icon-containers/CloseIcon';
 import SliderContainer from '../reusable-components/slider/Slider';
@@ -19,8 +19,6 @@ import OurWorks from './our-works/OurWorks';
 import ReactPlayer from 'react-player';
 import Title from '../reusable-components/title/Title';
 import './homeContainer.scss';
-import ImageContainer from './../reusable-components/image-container/ImageContainer';
-import bgImage from '../../assets/images/bg_image.jpg';
 
 const HomeContainer = () => {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
@@ -61,8 +59,7 @@ const HomeContainer = () => {
     <div className='homeContainer__wrapper'>
       <div className='homeContainer__wrapper__videoAndImage'>
         <VideoContainer autoPlay muted loop={true} />
-        <ImageContainer img={bgImage} />
-        {/* <ImageContainer /> */}
+        <ImageContainer />
       </div>
       <div className='homeContainer__wrapper__desc'>
         <ContentDescription
@@ -70,7 +67,6 @@ const HomeContainer = () => {
           secondLine='let your ideas come true'
           info='You have the vision for a stunning digital experience. We’re the software &nbsp; 
           design and engineering team that can bring it to life.'
-          buttonText='Get in touch'
         />
         <Fade bottom delay={100} duration={1100}>
           <div

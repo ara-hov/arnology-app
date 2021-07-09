@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
-import homeReduser from './home/reducer';
 export interface CombinedState {}
-const rootReducer = combineReducers({ homeReduser });
+const rootReducer = combineReducers({});
 
-export type RootReducerType = typeof rootReducer;
+export type RootState = ReturnType<typeof rootReducer>;
 export default rootReducer;

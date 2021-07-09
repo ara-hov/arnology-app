@@ -1,5 +1,5 @@
-@import '../../../styles/variables';
-@import '../../../styles/common';
+@import "../../../styles/variables";
+@import "../../../styles/common";
 
 .wrapper__navigation__wrapper {
   @include displayCenterGrid(auto auto auto auto auto auto auto);
@@ -17,8 +17,8 @@
       @include textStyle($primaryDarkGrey, 1.8rem, 1.44, 0.025rem);
       border: none;
       background: transparent;
-      padding: 2rem 0;
-      color: $primaryLightGreenBlueActive;
+      padding: 2rem 0;     
+      color:$primaryLightGreenBlueActive;
     }
     &--button:hover::before,
     &--buttonActive:hover::before {
@@ -29,8 +29,8 @@
     &--buttonActive::before {
       content: attr(data-text);
       position: absolute;
-      transform: translate3d(0, 17px, 0);
-      color: $primaryLightGreenBlueActive;
+      transform: translate3d(0, 17px, 0);     
+      color:$primaryLightGreenBlueActive;
       opacity: 0;
       transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
     }
@@ -57,6 +57,7 @@
     top: 3.2rem;
     font-size: 44px;
     font-weight: 100;
+    font-family: "slick";
     padding: 12px 16px;
     transform: translate(0%, -50%);
   }
@@ -79,8 +80,8 @@
     }
     &__navigation__wrapper {
       @include displayCenterGrid(auto);
-      justify-content: space-between;
-      text-align: left;
+      justify-content: space-between; 
+      text-align: left;     
 
       &__item--button {
         color: azure;

@@ -11,7 +11,6 @@ export interface ContentDescriptionProps {
   secondLine?: string;
   info?: string;
   buttonClassName?: string;
-  buttonText?: string;
 }
 export interface PopupProps {
   isOpen?: boolean;
@@ -61,7 +60,6 @@ export interface InputProps {
   type?: string;
   className?: string;
   checked?: boolean;
-  id?: string;
   onChange?: (
     e:
       | React.ChangeEvent<HTMLInputElement>
@@ -72,7 +70,7 @@ export interface InputProps {
   onBlur?: (
     e: FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLTextAreaElement>
   ) => void;
-  errorsMessage?: string | boolean | any;
+  errorsMessage?: string | boolean;
 }
 
 export interface TitleProps {
