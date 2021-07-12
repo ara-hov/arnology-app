@@ -7,9 +7,9 @@ const ServicesNavbar = ({fend,be,de,mob}:ServicesRefProps) =>{
     ]
 
     const scrollHandler = (e:any) =>{
-        window.scrollTo({behavior:'smooth',top:e?.current?.offsetTop-100})
+                      window.scrollTo({behavior:'smooth',top:e?.current?.offsetTop-100})
     }
-    return(
+           return(
         <div className="services__navbar">
             {servicesArray.map((e,i)=>{
                 return(
