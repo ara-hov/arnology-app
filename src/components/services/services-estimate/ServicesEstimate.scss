@@ -1,0 +1,43 @@
+@import "../../../styles/common";
+@import "../../../styles/variables";
+
+.services__estimate{
+    @include displayCenterGrid(auto);
+    background-color: $secondaryBackgroundGrey;
+    text-align: center;
+    &--header{       
+        opacity: 0.9;       
+        font-size: 44px;        
+        line-height: 1.23;
+        letter-spacing: 1.74px;        
+        color: #1f2937;
+        padding: 88px 0 32px;
+    }
+    &--text{
+        margin: 0 auto;
+        & p{
+            font-family: Cairo;
+            font-size: 18px;
+            font-weight: 600;            
+            line-height: 1.44;
+            letter-spacing: 0.1px;           
+            color: #1f2937;           
+            max-width: 266px;
+        }
+    }
+    &--button{
+        padding: 77px 0 108px;
+        & button{
+            padding: 17px 61px 17px 62px;
+            border-radius: 4px;
+            background-image: linear-gradient(to bottom, #04cfd2, #027e80);
+            font-family: Cairo;
+            font-size: 16px;
+            font-weight: bold;      
+            line-height: 1.63;
+            letter-spacing: 0.22px;            
+            color: #ffffff;           
+            border: none;          
+        }
+    }
+}

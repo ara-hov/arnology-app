@@ -134,20 +134,6 @@
   }
 }
 
-@media screen and (max-width: 1165px) {
-  .header__container {
-    &__button--dark {
-      @include actionButtons(
-        1px solid $secondaryWhite,
-        $secondaryWhite,
-        $primaryLightGreenBlue,
-        5px,
-        48px,
-        14rem
-      );
-    }
-  }
-}
 
 @media screen and (max-width: 1024px) {
   .header__container {
