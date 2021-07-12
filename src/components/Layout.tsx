@@ -23,8 +23,7 @@ const Layout: FC = () => {
         <Route exact path='/career' component={Career} />
         <Route exact path='/career/:id' component={CareerMore} />
         <Route exact path='/contact' component={Contact} />
-        <Route exact path='/404' component={NotFound} />
-        {/* <Redirect exact path='/login/:token' to={sessionStorage.location} /> */}
+        <Route component={NotFound} />
       </Switch>
       <Footer />
     </div>
