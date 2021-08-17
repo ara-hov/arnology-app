@@ -6,7 +6,7 @@ const StepsRight = () => {
             {
                 [1,2,3].map((e,i)=>{
                     return(
-                        <div className="steps__list__right__item">
+                        <div key={i} className="steps__list__right__item">
                             <h4>Planning</h4>
                             <p>
                                 Our team examines your requirements 

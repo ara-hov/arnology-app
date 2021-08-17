@@ -1,4 +1,4 @@
-import Logo from '../../components/icon-containers/Logo';
+import FooterLogo from '../icon-containers/FooterLogo';
 import WorldMap from '../icon-containers/WorldMap';
 import SocialIcons from '../reusable-components/social-icons/SocialIcons';
 import { footerData } from './fakeFooterData';
@@ -8,7 +8,7 @@ const Footer = () => {
   const { contacts, company, services } = footerData;
   return (
     <div className='footer__wrapper'>
-      <Logo className='footer__wrapper--logo' />
+      <FooterLogo className='footer__wrapper--logo' />
       <div className='footer__wrapper__content'>
         <div className='footer__wrapper__content__info'>
           <h6 className='footer__wrapper__content__info--title'>Contacts</h6>

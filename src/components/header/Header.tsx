@@ -9,15 +9,12 @@ import MobileNavbar from '../mobile-navbar/MobileNavbar';
 import { SelectType } from '../model';
 import './header.scss';
 import MobileLogo from '../icon-containers/MobileLogo';
-import {
-  fetchNavLinks,
-  homeSelector,
-} from '../../redux/features/home/homeSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { fetchNavLinks } from '../../redux/features/home/homeSlice';
+import { useDispatch } from 'react-redux';
 
 const Header: FC = () => {
   const { pathname } = useLocation();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const [color, setColor] = useState('');
   const [isOpen, setOpen] = useState(false);
@@ -28,12 +25,9 @@ const Header: FC = () => {
     { value: 'fr', label: 'FR' },
   ]);
 
-  // const { navLinks, loading, errors } = useSelector(homeSelector);
-  // const x = useSelector(homeSelector);
-
   useEffect(() => {
     dispatch(fetchNavLinks(lang.value));
-  }, [dispatch,lang.value]);
+  }, [dispatch, lang.value]);
 
   useEffect(() => {
     isOpen
@@ -52,21 +46,6 @@ const Header: FC = () => {
     setLangOptions([...filteredLang, lang]);
     setLang(option);
   };
-
-  useEffect(() => {
-    if (pathname === '/' || pathname === '/about' || pathname === '/career') {
-      setColor('#ffffff');
-    } else {
-      setColor('#1f2935');
-    }
-  }, [pathname]);
-
-  // if (loading) {
-  //   return <h1>Loading...</h1>;
-  // }
-  // if (errors) {
-  //   return <h1>{errors}</h1>;
-  // }
 
   return (
     <div className='header__container'>

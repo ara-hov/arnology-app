@@ -4,6 +4,7 @@ import ServicesNavbar from '../../components/services/services-navbar/ServicesNa
 import ServicesListItem from '../../components/services/services-list/ServicesListItem';
 import { useRef } from 'react';
 import ServicesSteps from '../../components/services/services-steps/ServicesSteps';
+import ServicesEstimate from "../../components/services/services-estimate/ServicesEstimate";
 const Services = () => {
   const beRef = useRef()
   const feRef = useRef()
@@ -32,6 +33,7 @@ const Services = () => {
       
     </div>
     <ServicesSteps/>
+    <ServicesEstimate/>
     </>
   );
 };

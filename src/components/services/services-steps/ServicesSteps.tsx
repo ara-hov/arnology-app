@@ -1,5 +1,6 @@
 import StepsLeft from "./components/steps-left/StepsLeft"
 import StepsRight from "./components/steps-right/StepsRight"
+import StepsMid from './components/steps-mid/steps-mid';
 import "./services-steps.scss"
 
 const ServicesSteps = () =>{
@@ -13,9 +14,7 @@ const ServicesSteps = () =>{
             </p>
             <div className="services__steps__list">
                 <StepsLeft/>
-                <div>
-                    mid
-                </div>
+                <StepsMid/>
                 <StepsRight/>
             </div>
         </div>
